@@ -1,4 +1,5 @@
 # About
+This website shows the documentation of the final prject of the course Computational Design Studio (BK7083)
 
 ## Project members
 Student | Role
@@ -13,5 +14,4 @@ Zhenning Zhang | Reflectionist
 Name | Faculty
 ---------|----------
  Dr. Ir. P. Nourian | TU Delft, Design Informatics
- Ir. H. Hoogeboom | TU Delft, Design Informatics
  Ir. S. Azadi | TU Delft, Design Informatics 
