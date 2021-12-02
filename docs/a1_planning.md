@@ -2,6 +2,18 @@
 
 ## Process
 
+### Context analysis
+Before diving in to the code and the notebooks, we did a little analysis of the location. In the map below, the position of our plot in the city of Rotterdam is shown. (Scale 1:10000)
+<center>
+    ![Connections](../img/Location_1op10000.png)
+</center>
+In this next map, we zoom in a little more and highlight the already existing facilities surrounding our potential building. (Scale 1:1500)
+<center>
+    ![Connections](../img/Location_1op15000.png)
+</center>
+
+### Design goals
+
 ## Products
 ### Metro network: Connections
 The graph below shows how the possible connections that can be formed between the different facilities in our building.
