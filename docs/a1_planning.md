@@ -15,8 +15,8 @@ In the graph below, the narratives we created to test our metro network are show
     ![Connections](../img/Diagram_narratives.png)
 </center>
 
-#### Narratives
-**Student**
+### Narratives
+##### Student
 
 *Week day*
 
@@ -25,6 +25,8 @@ In the graph below, the narratives we created to test our metro network are show
 *Weekend day*
 
 “On Saturday mornings, my girlfriend and I always sleep in. We start our day by going to the shop together to get some breakfast. We eat our breakfast at home, and since we both enjoy working out, we decide to go to the gym. After our workout, we go back home to take a shower. The weather is very nice today, so we sit outside in the garden for a bit and get a drink at the cafe. After our drinks, we go to the arcade to play some games. We are both very competitive. We decided to have dinner at home today. After dinner, we stayed at home to clean up the house and chill.”
+
+---
 
 **Elderly**
 
@@ -38,7 +40,8 @@ we walk together to the shop at around 10 o’clock. My partner has a walker, so
 
 “I live by myself in one of the assisted living houses. I start my day by going to the shop to get breakfast. I eat my breakfast at home and clean up my house in the morning. After lunch, I go to the garden to meet one of my best friends. We go to the coffee corner together to get some coffee. During our coffee, we decide to have dinner at the restaurant. After dinner, I say goodbye to my friend and go to the cafe to meet with a few ex-colleagues. We had a few drinks, and decided it would be fun to go to the arcade. On my way back home I go past the community centre to say hello to a few people. After a long day of social interactions, I go back home and head straight to bed.”
 
-**Starters**
+---
+##### Starters
 
 *Week day*
 
@@ -48,12 +51,15 @@ we walk together to the shop at around 10 o’clock. My partner has a walker, so
 
 “Saturdays for us are for family activities. We start the day off by having breakfast at home which takes quite long with two young kids. After we finished getting the kids and ourselves ready, we went for a bike ride through the city. On the way to the bike parking, we stopped at the shop to get some snacks for the bike ride. After a nice, long ride, we put our bicycles in the parking lot again and went to the restaurant to have a luxurious lunch. We decided to visit the kids’ grandmother in the assisted living units. When we got home, we decided to have a nice easy meal and order some pizza, so we don’t have to go out anymore for groceries after this tiring day.”
 
-**Visitors**
+---
+##### Visitors
 
 *Week day*
 
-“Today I am going to work in the fab labs and co-working space. I arrive by car and go to the fab labs straight away since I’m a bit late for work. My colleagues and I oversee everything that’s happening there. After lunch I go to the co-working space with a collegue of mine to do some paperwork. I finish work around 5 o’clock. I then quickly hop into the shop to get some groceries for dinner, which I’m going to cook at home. I walk back to my car and leave for the day.”
+⋅⋅⋅“Today I am going to work in the fab labs and co-working space. I arrive by car and go to the fab labs straight away since I’m a bit late for work. My colleagues and I oversee everything that’s happening there. After lunch I go to the co-working space with a collegue of mine to do some paperwork. I finish work around 5 o’clock. I then quickly hop into the shop to get some groceries for dinner, which I’m going to cook at home. I walk back to my car and leave for the day.”
 
 *Weekend day*
 
 “I live in the neighbourhood and I often spend part of my weekend days in this building. I use a lot of the facilities and this building really adds something to the neighbourhood. I arrive in the afternoon, after having lunch at home. My friend and I meet up at the coffee corner to get some drinks. We then go to the garden to enjoy the sunshine. Since it started raining today, we decided to go to the community centre, since a friend of ours lives in this building. This way we can spend time together, without having to spend any money on food or drinks. After chilling for a bit, I go to the shop to get groceries and then I go back home.”
+
+---
