@@ -13,6 +13,22 @@ In this next map, we zoom in a little more and highlight the already existing fa
 </center>
 
 ### Design goals
+We want to cerate a building that is designed for sustainability, in multiple ways. Our building should have the following characteristics:
+
++ Clear separation between private and public areas (Clustering)
+
++ Clear separation between private facilities and public facilities
+
++ Neighbourhood enrichment; mixed-use(rs), gathering of different types of people
+
++ Specific focus on the following sustainable topics:
+
+    + socially; foster social interactions, but don’t force people
+    + energy efficient; energy generation instead of consumption
+    + energy efficient; materials, waste, compact area of facades
+    + methodology; modularity, circularity 
+    + embedded technology; water storage, heat stress reduction, biodiversity
+
 
 ## Products
 ### Metro network: Connections
