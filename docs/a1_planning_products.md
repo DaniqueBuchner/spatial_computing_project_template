@@ -52,7 +52,7 @@ we walk together to the shop at around 10 o’clock. My partner has a walker, so
 
 *Week day*
 
-⋅⋅⋅“Today I am going to work in the fab labs and co-working space. I arrive by car and go to the fab labs straight away since I’m a bit late for work. My colleagues and I oversee everything that’s happening there. After lunch I go to the co-working space with a collegue of mine to do some paperwork. I finish work around 5 o’clock. I then quickly hop into the shop to get some groceries for dinner, which I’m going to cook at home. I walk back to my car and leave for the day.”
+“Today I am going to work in the fab labs and co-working space. I arrive by car and go to the fab labs straight away since I’m a bit late for work. My colleagues and I oversee everything that’s happening there. After lunch I go to the co-working space with a collegue of mine to do some paperwork. I finish work around 5 o’clock. I then quickly hop into the shop to get some groceries for dinner, which I’m going to cook at home. I walk back to my car and leave for the day.”
 
 *Weekend day*
 
