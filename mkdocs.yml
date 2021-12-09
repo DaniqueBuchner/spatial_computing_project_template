@@ -3,10 +3,12 @@ site_name: Spatial Computing Project Group 1
 nav:
   - Home: "index.md"
   - About: "about.md"
-  - A1_Planning: "a1_planning.md"
-  - A2_Configuring: "a2_configuring.md"
-  - A3_Massing: "a3_massing.md"
-  - A4_Forming: "a4_forming.md"
+  - Planning:
+    - Process: "a1_planning_process.md"
+    - Products: "a1_planning_products.md"
+  - Configuring: "a2_configuring.md"
+  - Massing: "a3_massing.md"
+  - Forming: "a4_forming.md"
   - Index:
       - Scripts: "index/scripts.md"
       - Figures: "index/figures.md"
