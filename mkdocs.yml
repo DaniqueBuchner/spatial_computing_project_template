@@ -6,7 +6,9 @@ nav:
   - Planning:
     - Process: "a1_planning_process.md"
     - Products: "a1_planning_products.md"
-  - Configuring: "a2_configuring.md"
+  - Configuring: 
+    - Process: "a2_configuring_process.md"
+    - Products: "a2_configuring_products.md"
   - Massing: "a3_massing.md"
   - Forming: "a4_forming.md"
   - Index:
