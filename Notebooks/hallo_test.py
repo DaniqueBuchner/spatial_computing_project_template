@@ -1,1 +1,1 @@
-print("gg")
+print("GG!")
