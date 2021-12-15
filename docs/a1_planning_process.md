@@ -3,23 +3,23 @@
 ### Context analysis
 Before diving in to the code and the notebooks, we did a little analysis of the location. In the maps below, the position of our plot in the city of Rotterdam is shown. Furthermore, the facilities and infrastructure surrounding our buidling are shown. And finally the solar path is presented.
 <center>
-    ![Location big](../img/map1.jpg)
+    ![Location big](../img/a1/map1.jpg)
 </center>
 
 <center>
-    ![Location small](../img/map2.jpg)
+    ![Location small](../img/a1/map2.jpg)
 </center>
 
 <center>
-    ![Facilities](../img/map3.jpg)
+    ![Facilities](../img/a1/map3.jpg)
 </center>
 
 <center>
-    ![Infrastructure](../img/map4.jpg)
+    ![Infrastructure](../img/a1/map4.jpg)
 </center>
 
 <center>
-    ![Sun](../img/map5.jpg)
+    ![Sun](../img/a1/map5.jpg)
 </center>
 
 ### Design goals
