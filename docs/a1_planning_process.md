@@ -1,7 +1,7 @@
 ## Process
 
 ### Context analysis
-Before diving in to the code and the notebooks, we did a little analysis of the location. In the maps below, the position of our plot in the city of Rotterdam is shown. Furthermore, the facilities and infrastructure surrounding our buidling are shown. And finally the solar path is presented.
+Before diving in to the code and the notebooks, we did a little analysis of the location. In the maps below, the position of our plot in the city of Rotterdam is shown. Furthermore, the facilities, infrastructure and nature surrounding our buidling are shown. And finally the solar path is presented.
 <center>
     ![Location big](../img/a1/map1.jpg)
 </center>
@@ -16,6 +16,10 @@ Before diving in to the code and the notebooks, we did a little analysis of the 
 
 <center>
     ![Infrastructure](../img/a1/map4.jpg)
+</center>
+
+<center>
+    ![Nature](../img/a1/map6.jpg)
 </center>
 
 <center>
