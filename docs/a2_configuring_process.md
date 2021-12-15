@@ -17,5 +17,5 @@ blahblahlah efficiency clustering etc
 ### Sustainability
 The last principle is sustainability. To achieve a sustainable building, we want to integrate a facade that is dismountable so that the sustainable materials can be re-used. We also want to implement a passive energy concept. In the winter, we try to warm the building with the heat of the sun to use the least possible artificial heating, and in the summer, we try to use the least cooling systems.
 <center>
-    ![Sustainability](.../img/design principles-04.png)
+    ![Sustainability](../img/design principles-04.png)
 </center>

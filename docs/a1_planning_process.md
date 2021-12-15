@@ -1,5 +1,3 @@
-# Planning
-
 ## Process
 
 ### Context analysis
