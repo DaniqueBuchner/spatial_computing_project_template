@@ -1,6 +1,3 @@
-## Process
-
-###  Design principles
 To further eloborate on the design goals, we came up with 3 main principles and used those to give us a directin in which we want to go and what code we had to produce.
 ### Neighbourhood Enrichment
 The first principle is Neighbourhood improvement. By making a building that does not block the sun for surrounding buildings, and vice versa, that provides easy access to the public facilities like the pub or the cinema by putting them close to the facade, and provides a 24/7 meeting place, we want to reach this first principle.
