@@ -1,15 +1,29 @@
-# Planning
-
 ## Process
 
 ### Context analysis
-Before diving in to the code and the notebooks, we did a little analysis of the location. In the map below, the position of our plot in the city of Rotterdam is shown. (Scale 1:10000)
+Before diving in to the code and the notebooks, we did a little analysis of the location. In the maps below, the position of our plot in the city of Rotterdam is shown. Furthermore, the facilities, infrastructure and nature surrounding our buidling are shown. And finally the solar path is presented.
 <center>
-    ![Connections](../img/Location_1op10000.png)
+    ![Location big](../img/a1/map1.jpg)
 </center>
-In this next map, we zoom in a little more and highlight the already existing facilities surrounding our potential building. (Scale 1:1500)
+
 <center>
-    ![Connections](../img/Location_1op15000.png)
+    ![Location small](../img/a1/map2.jpg)
+</center>
+
+<center>
+    ![Facilities](../img/a1/map3.jpg)
+</center>
+
+<center>
+    ![Infrastructure](../img/a1/map4.jpg)
+</center>
+
+<center>
+    ![Nature](../img/a1/map6.jpg)
+</center>
+
+<center>
+    ![Sun](../img/a1/map5.jpg)
 </center>
 
 ### Design goals
