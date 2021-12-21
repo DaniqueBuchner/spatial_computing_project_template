@@ -1,1 +1,1 @@
-![voxelsizes](../img/a2/voxelsize.png)
+![voxelsizes](../img/a2/Voxelsize.png)
