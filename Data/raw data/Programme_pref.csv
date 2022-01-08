@@ -3,7 +3,7 @@ Student Housing 1 p,0,0.4,0.55,0.87,0.8,0.6
 Student Housing 4 p,1,0.4,0.55,0.87,0.8,0.6
 Assisted Living,2,0.8,0.4,0.93,0.8,0.8
 Starter Housing,3,0.6,0.6,0.93,0.8,0.6
-Underground Parking,4,0.8,0.07,0,0,0
+Underground Parking,4,0.8,0.07,0.2,0,0
 Bicycle parking,5,0,0.85,0.07,0.2,0
 Vegetation/park,6,0.5,0.35,0.53,1,0
 Workshops,7,0.3,0.65,0.7,0.4,0.4
