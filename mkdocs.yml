@@ -1,4 +1,4 @@
-site_name: Spatial Computing Project Group 1
+site_name: Docking Station
 
 nav:
   - Home: "index.md"
@@ -27,9 +27,11 @@ theme:
   name: material
   palette: 
     scheme: 
-    primary: cyan
-    accent: light green
-
+    primary: blue grey
+    accent: light blue
+  font:
+    text: Montserrat
+  logo: img/favicon.png
 
 
 markdown_extensions:
