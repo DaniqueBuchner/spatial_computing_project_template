@@ -2,13 +2,20 @@
 
 The spatial analysis consists of the calculations for  
 
+* Distance to entrance
+* Noise field from street
+
 * Solar envelope
 * Sky view factor
 * Distance to facade
 
-* Distance to entrance
-* Noise fied from street
+## **The Distance to Entrance**
 
+(Place Holder)
+
+## **The noise field from street**
+
+(Place Holder)
 
 ## **The Solar Envelope**
 
