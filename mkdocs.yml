@@ -14,24 +14,24 @@ nav:
   - Massing: "a3_massing.md"
   - Forming: "a4_forming.md"
   - Index:
-      - Scripts: "index/scripts.md"
-        - Step 1.1 Voxelization high resolution:
-        - Step 1.2 Voxelization low resolution:
-        - Step 2.1 Solar envelope:
-        - Step 2.2 Shaping:
-        - Step 2.3 Visualization solar envelope:
-        - Step 3.1 Skyview:
-        - Step 3.2 Noise field from street:
-        - Step 3.3 Distance to entrance:
-        - Step 3.4 Distance to facade:
-        - Step 4 Interpolation Skyview:
-        - Step 4 Interpolation sun access:
-        - Step 4 Interpolation sun blockage:
-        - Step 6.1 ABM Growth model:
-        - Step 6.2 Visualization ABM model:
-        - Step 7 Shafts and corridors:
-        - Step 8.1 Poligonization Facade:
-        - Step 8.2 Poligonization structure:
+      - Scripts: 
+        - Step 1.1 Voxelization high resolution: "index/scripts/s1.1_voxelization_highres.md"
+        - Step 1.2 Voxelization low resolution: "index/scripts/s1.2_voxelization_lowres.md"
+        - Step 2.1 Solar envelope: "index/scripts/s2.1_solar_envelope.md"
+        - Step 2.2 Shaping: "index/scripts/s2.2_shaping.md"
+        - Step 2.3 Visualization solar envelope: "index/scripts/s2.3_visualization_solarenv.md"
+        - Step 3.1 Skyview: "index/scripts/s3.1_Skyview.md"
+        - Step 3.2 Noise field from street: "index/scripts/s3.2_Noise_field_from_street.md"
+        - Step 3.3 Distance to entrance: "index/scripts/.md"
+        - Step 3.4 Distance to facade: "index/scripts.md"
+        - Step 4 Interpolation Skyview: "index/scripts.md"
+        - Step 4 Interpolation sun access: "index/scripts.md" 
+        - Step 4 Interpolation sun blockage: "index/scripts.md"
+        - Step 6.1 ABM Growth model: "index/scripts.md"
+        - Step 6.2 Visualization ABM model: "index/scripts.md"
+        - Step 7 Shafts and corridors: "index/scripts.md"
+        - Step 8.1 Poligonization Facade: "index/scripts.md"
+        - Step 8.2 Poligonization structure: "index/scripts.md"
       - Figures: "index/figures.md"
       - Presentations: "index/presentations.md"
       - Bibliography: "index/bibliography.md"
