@@ -27,11 +27,15 @@ This is the website of group 1 of the Spatial Computing project, as a part of th
 
 #### Our starting point
 ``` python
+
+The following program of requirements has been given: 
+
 Housing: 
 o Student Housing 80 units 
 o Assisted Living 30 units 
-o Starter Housing 100 units 
-• Communal Spaces: 
+o Starter Housing 100 units
+
+• Communal Spaces:
 o Underground Parking (minimum of 0.5 parking lots per 
 apartment) 
 o Vegetation (minimum 30% of the plot) 
@@ -42,31 +46,5 @@ o Community Centre
 o Shop (grocery, tools and crafts) 
 o [electricity producing/odourless /geek-friendly] Gym
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-## Project members
-Student | Role
----------|---------
-Danique Buchner | Journalist
-Gerlinde Havelaar (till midterm) | Diagrammer 
-Paolo Pantano | Puzzle Solver
-Olivier Wiegerinck | Reflectionist
-Zhenning Zhang | Reflectionist
-
-## Tutors
-Name | Faculty
----------|----------
- Dr. Ir. P. Nourian | TU Delft, Design Informatics
- Ir. S. Azadi | TU Delft, Design Informatics 
 
 
