@@ -215,7 +215,7 @@ if current_length < max_space:
     occ_lattice[selected_neigh_3d_id] = a_id
 ```
 
-The remaining works are visualization, which we will discuss in a different file.
+The remaining works are visualization, which you can just copy and paste in our repository.
 
 ## **Rooms for improvement**
 

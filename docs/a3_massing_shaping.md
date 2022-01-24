@@ -28,6 +28,8 @@ If both upper and lower neighbor is empty, we remove the voxel. Here gives the f
 
 ## **Pesudocode**
 
+We provide Pesudocode for this part.
+
 ```python
 # initialization
 import topogenesis, numpy, pandas, ...
