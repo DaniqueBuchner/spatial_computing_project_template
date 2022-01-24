@@ -1,7 +1,7 @@
 ## Process
 
 ### Context analysis
-Before diving in to the code and the notebooks, we did a little analysis of the location. In the maps below, the position of our plot in the city of Rotterdam is shown. Furthermore, the facilities, infrastructure and nature surrounding our buidling are shown. And finally the solar path is presented.
+Before diving in to the code and the notebooks, we did a little analysis of the location. In the maps below, the position of our plot in the city of Rotterdam is shown. Furthermore, the facilities, infrastructure and nature surrounding our buidling are shown. Finally, a simplified solar path is presented to get a sense of what influence the sun has on the plot.
 <center>
     ![Location big](../img/a1/map1.jpg)
 </center>
@@ -42,3 +42,7 @@ We want to cerate a building that is designed for sustainability, in multiple wa
     + energy efficient; materials, waste, compact area of facades
     + methodology; modularity, circularity 
     + embedded technology; water storage, heat stress reduction, biodiversity
+
+<center>
+   ![Connections](../img/kleinzwart.png)
+</center>

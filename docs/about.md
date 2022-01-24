@@ -25,4 +25,6 @@ Name | Faculty
  Dr. Ir. P. Nourian | TU Delft, Design Informatics
  Ir. S. Azadi | TU Delft, Design Informatics 
 
- This website shows the documentation of the final project of the course Computational Design Studio (BK7083).
+<left>
+    ![Connections](../img/kleinzwart.png)
+</left>
