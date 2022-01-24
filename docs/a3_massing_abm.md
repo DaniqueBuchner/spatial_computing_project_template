@@ -225,9 +225,16 @@ The are a lot of improvement yet to be done.
 
 The Voxel size, even though using the highest resolution we designed, still can be smaller. In the agent based model we can clearly see that the vertical space is not quite enough for the agents to grow. This causes very disasterous problem at a later stage of the simulation, where agents are blocked by each other and not able to improve to a more optimal space where it could be nicer.  
 
-The large voxel size also stop the agents from being more precise. The placement of shafts and corridors are less flexible as well.
+The large voxel size also stop the agents from being more precise. The placement of shafts and corridors are less flexible as well.  
 
-However, the change in the voxel size is not just setting a different parameter. It is more about balancing calculation time and the benefits stated above. For our group, it took us about 4 hours for the agents to grow for 1500 frames (Although the model seldom change after 1200 frames).
+However, the change in the voxel size is not just setting a different parameter. It is more about balancing calculation time and the benefits stated above. For our group, it took us about 4 hours for the agents to grow for 1500 frames (Although the model seldom change after 1200 frames).  
 
-The complexity of the algorithm increases as the number of frames increases, so the improvement can be very difficult.
+The complexity of the algorithm increases as the number of frames increases, so the improvement can be very difficult.  
 
+### **More fields**
+
+In this agent based model, we only use 4 fields to evaluate. That is a bit not enough.  
+
+In some way, that contributes to the reason why many agents are blocked together: 4 fields are quite possible to cause overlaps in directions to grow. In other words, there are not enough variations for agent preferences.  
+
+Adding fields is very cost-efficient in a way that the calculation of field values is very quick and efficient. Even though this is just imaginary cases, in the real life, adding fields can easily lead to a better configured building with not much increse in computing cost.
