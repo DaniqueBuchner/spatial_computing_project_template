@@ -135,3 +135,38 @@ for loc in a_locs:
 Then we can proceed to the evaluation.
 
 ### **Evaluating every free neighbor**
+
+For free neighbors, we calculate the weighted field values.
+
+```python
+for f in program_prefs.columns:
+    vals = fields[f][fns[:,0], fns[:,1], fns[:,2]]
+    a_weighted_vals = vals ** a_prefs[f]
+    a_eval *= a_weighted_vals
+```
+
+And then we add the closeness to other agents into the account.
+
+```python
+for s in program_test.columns:
+    s = int(s)
+    vals = distance(s,fns)
+    a_weighted_vals = vals ** program_test[str(a_id)][s]
+    a_eval *= a_weighted_vals
+```
+
+And finally here comes the squareness. The evaulation of the squareness for each free neighbor is based on "how much time it is considered as a neighbor." With a higher number of times, the squareness index would be higher. 
+
+```python
+free_neighs_count = []
+    for free_neigh in free_neighs:
+        free_neighs_count.append(free_neighs_sq.count(free_neigh))
+    a_weighted_square = np.array(free_neighs_count) ** square_weight
+    a_eval *= a_weighted_square
+```
+
+To avoid growing vertically, which is meaningless for most of the cases, we changed the stencil to count it only in horizontal direction.
+
+<center>
+    ![](../img/a3/abm/horizontal_voxel.png)
+</center>
