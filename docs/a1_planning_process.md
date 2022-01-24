@@ -1,6 +1,11 @@
 ### Context analysis
 Before diving in to the code and the notebooks, we did a little analysis of the location. In the maps below, the position of our plot in the city of Rotterdam is shown. Furthermore, the facilities, infrastructure and nature surrounding our buidling are shown. Finally, a simplified solar path is presented to get a sense of what influence the sun has on the plot.
 
+#### Building plot
+<center>
+    ![Location big](../img/home/building_plot-05.jpg)
+</center>
+
 #### Overview of the location (large scale)
 <center>
     ![Location big](../img/a1/map1.jpg)
@@ -42,6 +47,7 @@ The greenery in the area consists for the most part of low quality. Most of the 
 </center>
 
 Finally, we looked at a simplified solar path to see what the impact roughly can be on our project building. To get an even better picture of the influence of the sun, we looked at the heights of the surrounding buildings. During this analysis, we found out that the tallest building is situated on the south side of the plot. This means that some of the sunlight will be blocked by a surrounding building. We think that it is important to take this into account during our calculations because it could influence how much sun is falling on the surface of our building.  
+
 
 ### Design goals
 We want to create a building that is designed for sustainability, in multiple ways. Our building should have the following characteristics:
