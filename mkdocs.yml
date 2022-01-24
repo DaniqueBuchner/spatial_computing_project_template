@@ -53,6 +53,12 @@ theme:
     text: Montserrat
   logo: img/favicon.png
 
+plugins:
+  - mknotebooks:
+      enable_default_jupyter_cell_styling: false
+      enable_default_pandas_dataframe_styling: false
+  - search:
+      lang: en
 
 markdown_extensions:
   - codehilite
