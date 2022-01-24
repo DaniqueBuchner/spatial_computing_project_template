@@ -65,3 +65,4 @@ o Rational spectra of privacy and community (Qualitative)
 <center>
     ![Connections](../img/home/docking_station_plaatjes-04.jpg)
 </center>
+
