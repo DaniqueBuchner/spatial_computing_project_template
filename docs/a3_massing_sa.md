@@ -65,3 +65,24 @@ The shadow casted by this building is done by a similar idea. The only thing cha
 <center>
     ![](../img/a3/sa/sunblock.png)
 </center>
+
+## **The Sky View Factor**
+
+The sky view factor means the percentage of open sky we can see at a specific point. In places like midtown Manhatten, the sky view factor is very low due to the large amount of sky scrapers. And in comparison, in the middle of a desert the sky view factor and be close to 1, as there is no blockage anywhere.  
+
+This idea can be useful in tackling Urban Heat Island Effect. It is also interesting to use it for other interesting measures.  
+
+The implementation of it is rather simple. Using the same library as above, we can create a semisphere of rays.  
+
+<center>
+    ![](../img/a3/sa/semisphere.png)
+</center>
+
+Then we compute the percentage that those rays hit the surroundings.
+
+<center>
+    ![](../img/a3/sa/skyviewfactor.png)
+</center>
+
+
+## **The Distance to Facade**
