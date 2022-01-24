@@ -57,3 +57,23 @@ We do not do any changes here for the adjacency matrix, the column and row index
 
 ## **Placement of the original location**
 
+To start the agent based growth, we need to have the original location of those agents. It could be done in completely random, however that will be not suitable especially when we have a relatively large amount of agents. We designed a specific algorithm for the original location.
+
+The first thing to decide is who can be placed first. We now assume that the most important agents are those who take more spaces. As a result, we first order those agents based on their designated areas/volumes.
+
+```python
+sizes_complete = sizes_complete.sort_values(by = 'Area', ascending = 0)
+program_complete = program_complete.sort_values(by = 'Area', ascending = 0)
+```
+
+For each agent, we calculate their perference value for every voxel available and take voxel corresponding to the largest value. Then we assign the voxel to it and update the available lattice.
+
+```python
+avail_index = np.array(np.where(avail_lattice)).T
+a_eval = np.ones(len(avail_index))
+for f in program_prefs.columns:
+    vals = fields[f][avail_index[:,0], avail_index[:,1], avail_index[:,2]]
+    a_weighted_vals = vals ** a_prefs[f]
+    a_eval *= a_weighted_vals
+```
+
