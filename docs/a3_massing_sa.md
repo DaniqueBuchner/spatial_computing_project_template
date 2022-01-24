@@ -11,11 +11,11 @@ The spatial analysis consists of the calculations for
 
 ## **The Distance to Entrance**
 
-(Place Holder)
+(Place Holder @Paolo)
 
 ## **The noise field from street**
 
-(Place Holder)
+(Place Holder @Paolo)
 
 ## **The Solar Envelope**
 
