@@ -115,3 +115,23 @@ The resulting original locations are much more suitable for an agent based growi
 </center>
 
 ## **The Agent Based Model**
+
+Just as described in Objectives, we made some additonal changes on the agent based model such that it can have more functions. On this page I will (assume that the reader have no background knowledge and) break the whole process into small segment for explanation.
+
+### **Checking free neighbors**
+
+In order to grow, the agent should first know where can it grow: the available neighbors that we call it free neighbors. We do it by finding the neighbors of all voxels inside the current agent. Then, if any neighbor we find is available, we add its 3d index into the free_neighs.
+
+```python
+free_neighs = []
+for loc in a_locs:
+    neighs = avail_lattice.find_neighbours_masked(stencil, loc = loc)
+    for n in neighs:
+        neigh_3d_id = np.unravel_index(n, avail_lattice.shape)
+        if avail_lattice[neigh_3d_id]:
+            free_neighs.append(neigh_3d_id)
+```
+
+Then we can proceed to the evaluation.
+
+### **Evaluating every free neighbor**
