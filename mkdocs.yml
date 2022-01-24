@@ -18,7 +18,7 @@ nav:
   - Forming: "a4_forming.md"
   - Index:
       - Scripts: 
-        - Step 1.1 Voxelization high resolution: "notebooks/s1.1_voxelization_highres.ipynb"
+        - Step 1.1 Voxelization high resolution: "Notebooks/s1.1_voxelization_highres.ipynb"
         - Step 1.2 Voxelization low resolution: "index/scripts/s1.2_voxelization_lowres.md"
         - Step 2.1 Solar envelope: "index/scripts/s2.1_solar_envelope.md"
         - Step 2.2 Shaping: "index/scripts/s2.2_shaping.md"
