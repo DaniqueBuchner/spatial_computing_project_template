@@ -15,6 +15,7 @@ nav:
   - Massing_test:
     - Process: 
       - Intro: "a3_massing_intro.md"
+      - Spatial Analysis: "a3_massing_sa.md"
       - ABM: "a3_massing_abm.md"
       - Shafts and corridors: "a3_massing_shafts_corridors.md"
   - Forming: "a4_forming.md"
