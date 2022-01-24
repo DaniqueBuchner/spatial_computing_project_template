@@ -252,3 +252,101 @@ However this obviously will cost other problems such as we have a lot of floatin
 Using manifold distances will not only give a better estimation for the true distance, but also enable a faster speed for calculation, as it is just reading a big matrix and no real calculation is involved.
 
 ~~The reason for our group (me) did not use manifold distance is purely because I did not figured out how to.~~
+
+## **The Pesudocode**
+
+Here we also provide the pesudocode for our ABM.
+
+```python
+# initialization
+import pandas, numpy, topogenesis, ...
+define stencil & stencil_sq (neighborhood calculation)
+
+# load all results
+read lattice, preference, & adjacency matrix
+order based on Area
+adjust preferences to balance power effect
+
+read dynamical results
+fields = {}
+for value in dunamical results: 
+    fields[name] = value
+
+# initialization agents
+for a_id, a_prefs in preferences.iterrows():
+    update avail_index
+    a_eval = np.ones(len(avail_index))
+    # search for the best location inside available lattice
+    for f in fields:
+        a_eval *= fields[f][avail_index] ** a_prefs[f]
+    place agent to maximum point
+    if occupied neighbors >= 2:
+        choose the next largest point
+    update lattices
+
+# calculate distance (estimate)
+def distance(a_id,fns):
+    dist = []
+    for cen in fns_cens:
+        dist.append(distance between cen & the central point of a_id)
+    return dist
+
+# the agent based model
+while t < n_frames:
+    for a_id, a_prefs in preferences.iterrows():
+        # calculate free neighbors and neighbors for squareness
+        fns, fns_sq = [], []
+        neighs, neighs_sq = findneigh(stencil,loc[a_id]), findneigh(stencil_sq,loc[a_id])
+        for n in neighs:
+            if n is avail: fns.append(n)
+        for n in neighs_sq:
+            if n is avail: fns_sq.append(n)
+        
+        # the evaluation process
+        if len(fns)>0:
+            a_eval = np.ones(len(fns))
+            # evaluate preference
+            for f in fields:
+                a_eval *= fields[f][fns] ** a_prefs[f]
+            # evaluate closeness to other agents
+            for s in agents:
+                a_eval *= distance(s,fns) ** weight
+            # evaluate squareness
+            fns_count = []
+            for fn in fns:
+                fns_count.append(fns_sq.count(fn))
+            a_eval *= fns_count ** square_weight
+
+            # if the agent has reached its desired space
+            calculate current_length
+            if current_length >= max_space:
+                (calculate preference & closeness)
+                # evaluate squareness
+                i_neighs_count = np.zeros(current_length)
+                for id,loc in enumerate(a_locs):
+                    neighs = findneigh(stencil_sq,loc)
+                    for n in neighs:
+                        i_neighs_count[id] += (occ_lattice==a_id)[n]
+                i_eval *= i_neighs_count ** square_weight
+            
+            # find lowest inner value
+            selected_int_inner = np.argmin(i_eval)
+            # find largerst fns value
+            selected_int = np.argmax(a_eval)
+
+            # if the agent has reached its desired space and the fns is better
+            if current_length >= max_space and min(a_eval) > max(i_eval):
+                remove the inner voxel
+            
+            # add the new voxel
+            if not current_length >= max_space:
+                add selected new voxel
+    
+    construct new_occ_lattice
+    frames.append(new_occ_lattice)
+    t += 1
+
+# visualization and saving
+visualize
+save the frames to csv
+```
