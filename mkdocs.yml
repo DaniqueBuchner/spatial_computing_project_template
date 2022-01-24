@@ -51,7 +51,7 @@ theme:
     accent: light blue
   font:
     text: Montserrat
-  logo: img/favicon.png
+  logo: img/klein.png
 
 
 markdown_extensions:

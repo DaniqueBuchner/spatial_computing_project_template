@@ -1,7 +1,7 @@
 # **The Agent Based Model**
 
 ## **Description (Objectives)**
-### Criteria for the agent based model
+### **Criteria for the agent based model**
 
 * Value fields
     1. Noise
@@ -11,13 +11,13 @@
 * Closeness to other agents  
 * Squareness of the space
 
-### Extra function for the agent based model
+### **Extra function for the agent based model**
 
 * When the agent has grown to the required space needed, they can grow like a "greedy snake," such that they can compare the inner voxels with the free neighbors to choose move or not.
 
 ## **The input of the agent based model**
 
-### Agent Preferences
+### **Agent Preferences**
 
 Originally, all preferences range between 0 and 1. For simplification and unification of the calculating process, every of them will be multiplied by a unique constant to balance the scale difference in value fields.  
 
@@ -32,7 +32,7 @@ For the value field of **noise_field**, **dist_entrance**, and **dist_fac**, the
 | Assisted Living     | 2        | 0.8         | 0.4           | 0.93     | 0.8      | 0.8     |
 | Starter Housing     | 3        | 0.6         | 0.6           | 0.93     | 0.8      | 0.6     |
 
-### Value fields
+### **Value fields**
 
 Value fields are read as a dictionary where keys contain the names and values contain lattices of corrsponding values.
 
@@ -43,7 +43,7 @@ for f in program_prefs.columns:
     fields[f] = tg.lattice_from_csv(lattice_path)
 ```
 
-### Adjacency matrix
+### **Adjacency matrix**
 
 We do not do any changes here for the adjacency matrix, the column and row index are aligned with the corresponding space_id (agent_id).
 
@@ -59,12 +59,16 @@ We do not do any changes here for the adjacency matrix, the column and row index
 
 To start the agent based growth, we need to have the original location of those agents. It could be done in completely random, however that will be not suitable especially when we have a relatively large amount of agents. We designed a specific algorithm for the original location.
 
+### **Ordering agents**
+
 The first thing to decide is who can be placed first. We now assume that the most important agents are those who take more spaces. As a result, we first order those agents based on their designated areas/volumes.
 
 ```python
 sizes_complete = sizes_complete.sort_values(by = 'Area', ascending = 0)
 program_complete = program_complete.sort_values(by = 'Area', ascending = 0)
 ```
+
+### **Calculating preference values**
 
 For each agent, we calculate their perference value for every voxel available and take voxel corresponding to the largest value. Then we assign the voxel to it and update the available lattice.
 
@@ -82,6 +86,8 @@ However we later find this not enough. The result of this simple algorithm will 
 <center>
     ![](../img/a3/abm/original_loc_before.png)
 </center>
+
+### **The new restriction**
 
 So a new restriction on the allowed number of occupied neighborhoods is added. If more than 1 of the neighborhoods are occupied, the algorithm will automatically search for the next best location, until the condition is satisfied.
 
@@ -107,3 +113,25 @@ The resulting original locations are much more suitable for an agent based growi
 <center>
     ![](../img/a3/abm/original_loc_after.png)
 </center>
+
+## **The Agent Based Model**
+
+Just as described in Objectives, we made some additonal changes on the agent based model such that it can have more functions. On this page I will (assume that the reader have no background knowledge and) break the whole process into small segment for explanation.
+
+### **Checking free neighbors**
+
+In order to grow, the agent should first know where can it grow: the available neighbors that we call it free neighbors. We do it by finding the neighbors of all voxels inside the current agent. Then, if any neighbor we find is available, we add its 3d index into the free_neighs.
+
+```python
+free_neighs = []
+for loc in a_locs:
+    neighs = avail_lattice.find_neighbours_masked(stencil, loc = loc)
+    for n in neighs:
+        neigh_3d_id = np.unravel_index(n, avail_lattice.shape)
+        if avail_lattice[neigh_3d_id]:
+            free_neighs.append(neigh_3d_id)
+```
+
+Then we can proceed to the evaluation.
+
+### **Evaluating every free neighbor**
