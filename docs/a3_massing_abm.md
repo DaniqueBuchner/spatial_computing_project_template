@@ -246,3 +246,9 @@ It will be hard to do but seems necessary for this project. If we look at the fi
 One proposal I would have for the negotiation is that, we can probably write a model, say, can even consider the voxel that is already occupied. If the value is larger than that of the other agent, then the other agent should just give up this space (and by the setting of the ABM, it will find a place to grow elsewhere).   
 
 However this obviously will cost other problems such as we have a lot of floating voxels. It is not to say this is not doable, but just need more work to fix and will definitely result in something better.  
+
+### **Use manifold distances**
+
+Using manifold distances will not only give a better estimation for the true distance, but also enable a faster speed for calculation, as it is just reading a big matrix and no real calculation is involved.
+
+~~The reason for our group (me) did not use manifold distance is purely because I did not figured out how to.~~
