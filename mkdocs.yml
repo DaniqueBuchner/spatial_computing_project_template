@@ -19,10 +19,10 @@ nav:
   - Index:
       - Scripts: 
         - Step 1.1 Voxelization high resolution: "Notebooks/s1.1_voxelization_highres.ipynb"
-        - Step 1.2 Voxelization low resolution: "Notebooks/s1.2_voxelization_lowres.md"
+        - Step 1.2 Voxelization low resolution: "Notebooks/s1.2_voxelization_lowres.ipynb"
         - Step 2.1 Solar envelope: "Notebooks/s2.1_solar_envelope.ipynb"
         - Step 2.2 Shaping: "Notebooks/s2.2_shaping.ipynb"
-        - Step 2.3 Visualization solar envelope: "Notebooks/s2.3_visualization_solarenv.ipynb"
+        - Step 2.3 Visualization solar envelope: "Notebooks/s2.3_visualisation_solarenv.ipynb"
         - Step 3.1 Skyview: "Notebooks/s3.1_Skyview.ipynb"
         - Step 3.2 Noise field from street: "Notebooks/s3.2_Noise_field_from_street.ipynb"
         - Step 3.3 Distance to facade: "Notebooks/s3.3_distance_to_facade.ipynb"
