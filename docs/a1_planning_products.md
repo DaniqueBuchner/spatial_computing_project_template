@@ -1,4 +1,3 @@
-## Products
 ### Metro network: Connections
 The graph below shows how the possible connections that can be formed between the different facilities in our building.
 <center>
@@ -60,5 +59,11 @@ we walk together to the shop at around 10 o’clock. My partner has a walker, so
 *Weekend day (Resident of the neighbourhood)*
 
 “I live in the neighbourhood and I often spend part of my weekend days in this building. I use a lot of the facilities and this building really adds something to the neighbourhood. I arrive in the afternoon, after having lunch at home. My friend and I meet up at the coffee corner to get some drinks. We then go to the garden to enjoy the sunshine. Since it started raining today, we decided to go to the community centre, since a friend of ours lives in this building. This way we can spend time together, without having to spend any money on food or drinks. After chilling for a bit, I go to the shop to get groceries and then I go back home.”
+
+---
+
+<center>
+   ![Connections](../img/kleinzwart.png)
+</center>
 
 ---
