@@ -1,5 +1,3 @@
-## Process
-
 ### Context analysis
 Before diving in to the code and the notebooks, we did a little analysis of the location. In the maps below, the position of our plot in the city of Rotterdam is shown. Furthermore, the facilities, infrastructure and nature surrounding our buidling are shown. Finally, a simplified solar path is presented to get a sense of what influence the sun has on the plot.
 
@@ -62,6 +60,8 @@ We want to create a building that is designed for sustainability, in multiple wa
     + methodology; modularity, circularity 
     + embedded technology; water storage, heat stress reduction, biodiversity
 
+---
 <center>
    ![Connections](../img/kleinzwart.png)
 </center>
+---

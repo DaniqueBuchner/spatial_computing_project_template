@@ -25,6 +25,8 @@ Name | Faculty
  Dr. Ir. P. Nourian | TU Delft, Design Informatics
  Ir. S. Azadi | TU Delft, Design Informatics 
 
-<left>
+---
+<center>
     ![Connections](../img/kleinzwart.png)
-</left>
+</center>
+---

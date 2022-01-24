@@ -16,3 +16,9 @@ The last principle is sustainability. To achieve a sustainable building, we want
 <center>
     ![Sustainability](../img/a2/design principles-04.png)
 </center>
+
+---
+<center>
+    ![Connections](../img/kleinzwart.png)
+</center>
+---
