@@ -170,3 +170,49 @@ To avoid growing vertically, which is meaningless for most of the cases, we chan
 <center>
     ![](../img/a3/abm/horizontal_voxel.png)
 </center>
+
+### **Reaching required space**
+
+If the agent already reaches the required space, we will also examine the inner voxels. The process for fields and closeness is nearly identical. But the method of retriving squareness index is quite different.
+
+```python
+i_neighs_count = np.zeros(current_length)
+for id,loc in enumerate(a_locs):
+    neighs = init_avail_lattice.find_neighbours_masked(stencil_sq, loc = loc)
+    for n in neighs:
+        neigh_3d_id = np.unravel_index(n, avail_lattice.shape)
+        i_neighs_count[id] += (occ_lattice==a_id)[neigh_3d_id]
+i_weighted_square = np.array(i_neighs_count) ** square_weight
+i_eval *= i_weighted_square
+```
+
+It is actually a more direct way of counting: we just examine how many neighbors of the inner voxel is the same type.  
+
+### **Adding or replacing the voxel**
+
+The logic is here: if we find the newer voxel is better (as well as the agent reaches the required space), then we delete the inner voxel.
+
+```python
+selected_int = np.argmax(a_eval)
+selected_int_inner = np.argmin(i_eval)
+
+if (current_length >= max_space) and i_eval[selected_int_inner] < a_eval[selected_int]:
+    selected_inner_3d_id = tuple(a_locs[selected_int_inner])
+    selected_inner_loc = a_locs[selected_int_inner]
+    agn_locs[a_id].pop(selected_int_inner)
+    avail_lattice[selected_inner_3d_id] = 1
+    occ_lattice[selected_inner_3d_id] = -1
+```
+
+Then, by one if condition we can combine adding under "not reached required space yet" and "older voxel is deleted" together.
+
+```python
+if current_length < max_space:
+    selected_neigh_3d_id = free_neighs[selected_int]
+    selected_neigh_loc = np.array(selected_neigh_3d_id).flatten()
+    agn_locs[a_id].append(selected_neigh_loc)
+    avail_lattice[selected_neigh_3d_id] = 0
+    occ_lattice[selected_neigh_3d_id] = a_id
+```
+
+The remaining works are visualization, which we will discuss in a different file.
