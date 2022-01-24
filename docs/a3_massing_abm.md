@@ -19,9 +19,9 @@
 
 ### Agent Preferences
 
-Originally, all preferences range between 0 and 1. For simplification and unification of the calculating process, later a constant will be multiplied to balance the value fields.  
+Originally, all preferences range between 0 and 1. For simplification and unification of the calculating process, every of them will be multiplied by a unique constant to balance the scale difference in value fields.  
 
-For the value field of **noise_field**, **dist_entrance**, and **dist_fac**, the value will time -1 since they are "the lower the better."
+For the value field of **noise_field**, **dist_entrance**, and **dist_fac**, the value will be multiplied by -1 in addition, since a lower value in fields corresponding to a higher value in the evaluation equation.
 
 *(The following table is only for illustration, which is the head of the original full table)*
 
@@ -34,5 +34,46 @@ For the value field of **noise_field**, **dist_entrance**, and **dist_fac**, the
 
 ### Value fields
 
+Value fields are read as a dictionary where keys contain the names and values contain lattices of corrsponding values.
+
+```python
+fields = {}
+for f in program_prefs.columns:
+    lattice_path = os.path.relpath('../Data/dynamic output/' + f + '.csv')
+    fields[f] = tg.lattice_from_csv(lattice_path)
+```
+
 ### Adjacency matrix
+
+We do not do any changes here for the adjacency matrix, the column and row index are aligned with the corresponding space_id (agent_id).
+
+|    | 0   | 1   | 2   | 3   | 4   | 5   | 6   | 7   | 8   | 9   | 10  | 11  | 12  | 13  | 14  | 15  | 16  | 17  | 18  | 19  | 20  | 21  |
+|----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|
+| 0  | 1   | 0.1 | 0   | 0   | 0   | 0.6 | 0.1 | 0   | 0   | 0   | 0   | 0.1 | 0   | 0   | 0.3 | 0.2 | 0   | 0   | 0   | 0.9 | 0.9 | 0.1 |
+| 1  | 0.1 | 1   | 0   | 0   | 0   | 0.6 | 0   | 0   | 0.1 | 0   | 0   | 0.3 | 0.2 | 0.8 | 0.2 | 0   | 0.3 | 0.2 | 0   | 0.8 | 0   | 0.6 |
+| 2  | 0   | 0   | 1   | 0.4 | 0.2 | 0   | 0.1 | 0.2 | 0   | 0   | 0   | 0.1 | 0   | 0   | 0.1 | 0.1 | 0.1 | 0.2 | 0.6 | 0.3 | 0.1 | 0   |
+| 3  | 0   | 0   | 0.4 | 1   | 0.9 | 0   | 1   | 0   | 0.1 | 0.8 | 0.2 | 0.2 | 0.2 | 0.6 | 0.2 | 0.2 | 0   | 0.2 | 0.3 | 0.9 | 0.6 | 0   |
+
+
+## **Placement of the original location**
+
+To start the agent based growth, we need to have the original location of those agents. It could be done in completely random, however that will be not suitable especially when we have a relatively large amount of agents. We designed a specific algorithm for the original location.
+
+The first thing to decide is who can be placed first. We now assume that the most important agents are those who take more spaces. As a result, we first order those agents based on their designated areas/volumes.
+
+```python
+sizes_complete = sizes_complete.sort_values(by = 'Area', ascending = 0)
+program_complete = program_complete.sort_values(by = 'Area', ascending = 0)
+```
+
+For each agent, we calculate their perference value for every voxel available and take voxel corresponding to the largest value. Then we assign the voxel to it and update the available lattice.
+
+```python
+avail_index = np.array(np.where(avail_lattice)).T
+a_eval = np.ones(len(avail_index))
+for f in program_prefs.columns:
+    vals = fields[f][avail_index[:,0], avail_index[:,1], avail_index[:,2]]
+    a_weighted_vals = vals ** a_prefs[f]
+    a_eval *= a_weighted_vals
+```
 
