@@ -40,6 +40,12 @@
     
     
     
+      <link rel="stylesheet" href="../css/ansi-colours.css">
+    
+      <link rel="stylesheet" href="../css/jupyter-cells.css">
+    
+      <link rel="stylesheet" href="../css/pandas-dataframe.css">
+    
     
       
 
@@ -64,6 +70,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#voxelsize" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -75,7 +86,7 @@
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href=".." title="Docking Station" class="md-header__button md-logo" aria-label="Docking Station" data-md-component="logo">
       
-  <img src="../img/favicon.png" alt="logo">
+  <img src="../img/klein.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -99,40 +110,6 @@
     </div>
     
     
-    
-      <label class="md-header__button md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
-      </label>
-      
-<div class="md-search" data-md-component="search" role="dialog">
-  <label class="md-search__overlay" for="__search"></label>
-  <div class="md-search__inner" role="search">
-    <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
-      <label class="md-search__icon md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-      </label>
-      <nav class="md-search__options" aria-label="Search">
-        
-        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
-        </button>
-      </nav>
-      
-    </form>
-    <div class="md-search__output">
-      <div class="md-search__scrollwrap" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="search-result">
-          <div class="md-search-result__meta">
-            Initializing search
-          </div>
-          <ol class="md-search-result__list"></ol>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
     
     
   </nav>
@@ -161,7 +138,7 @@
   <label class="md-nav__title" for="__drawer">
     <a href=".." title="Docking Station" class="md-nav__button md-logo" aria-label="Docking Station" data-md-component="logo">
       
-  <img src="../img/favicon.png" alt="logo">
+  <img src="../img/klein.png" alt="logo">
 
     </a>
     Docking Station
@@ -346,9 +323,39 @@
       
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Voxelsize
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         Voxelsize
       </a>
+      
+        
+
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#voxelsize" class="md-nav__link">
+    Voxelsize
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -404,6 +411,115 @@
   
   
   
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6">
+          Massing_test
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Massing_test" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Massing_test
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_1" type="checkbox" id="__nav_6_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6_1">
+          Process
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Process" data-md-level="2">
+        <label class="md-nav__title" for="__nav_6_1">
+          <span class="md-nav__icon md-icon"></span>
+          Process
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../a3_massing_intro/" class="md-nav__link">
+        Intro
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../a3_massing_abm/" class="md-nav__link">
+        ABM
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../a3_massing_shafts_corridors/" class="md-nav__link">
+        Shafts and corridors
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
     <li class="md-nav__item">
       <a href="../a4_forming/" class="md-nav__link">
         Forming
@@ -423,18 +539,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" >
       
       
       
       
-        <label class="md-nav__link" for="__nav_7">
+        <label class="md-nav__link" for="__nav_8">
           Index
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Index" data-md-level="1">
-        <label class="md-nav__title" for="__nav_7">
+        <label class="md-nav__title" for="__nav_8">
           <span class="md-nav__icon md-icon"></span>
           Index
         </label>
@@ -445,10 +561,267 @@
   
   
   
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_1" type="checkbox" id="__nav_8_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_8_1">
+          Scripts
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Scripts" data-md-level="2">
+        <label class="md-nav__title" for="__nav_8_1">
+          <span class="md-nav__icon md-icon"></span>
+          Scripts
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
     <li class="md-nav__item">
-      <a href="../index/scripts/" class="md-nav__link">
-        Scripts
+      <a href="../Notebooks/s1.1_voxelization_highres/" class="md-nav__link">
+        Step 1.1 Voxelization high resolution
       </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Notebooks/s1.2_voxelization_lowres/" class="md-nav__link">
+        Step 1.2 Voxelization low resolution
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Notebooks/s2.1_solar_envelope/" class="md-nav__link">
+        Step 2.1 Solar envelope
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Notebooks/s2.2_shaping/" class="md-nav__link">
+        Step 2.2 Shaping
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Notebooks/s2.3_visualisation_solarenv/" class="md-nav__link">
+        Step 2.3 Visualization solar envelope
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Notebooks/s3.1_Skyview/" class="md-nav__link">
+        Step 3.1 Skyview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Notebooks/s3.2_Noise_field_from_street/" class="md-nav__link">
+        Step 3.2 Noise field from street
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Notebooks/s3.3_distance_to_facade/" class="md-nav__link">
+        Step 3.3 Distance to facade
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Notebooks/s3.4_distance_to_entrance/" class="md-nav__link">
+        Step 3.4 Distance to entrance
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Notebooks/s4_interpolation_skyview/" class="md-nav__link">
+        Step 4 Interpolation Skyview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Notebooks/s4_interpolation_sun_access/" class="md-nav__link">
+        Step 4 Interpolation sun access
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Notebooks/s4_interpolation_sun_blockage/" class="md-nav__link">
+        Step 4 Interpolation sun blockage
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Notebooks/s6.1_ABM_growth/" class="md-nav__link">
+        Step 6.1 ABM Growth model
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Notebooks/s6.2_ABM_visual/" class="md-nav__link">
+        Step 6.2 Visualization ABM model
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Notebooks/s7_Shafts_corridors/" class="md-nav__link">
+        Step 7 Shafts and corridors
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Notebooks/s8.1_polgonization_facade2/" class="md-nav__link">
+        Step 8.1 Polygonization Facade
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Notebooks/s8.2_polgonization_structure/" class="md-nav__link">
+        Step 8.2 Polygonization structure
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -513,18 +886,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9" type="checkbox" id="__nav_9" >
       
       
       
       
-        <label class="md-nav__link" for="__nav_8">
+        <label class="md-nav__link" for="__nav_9">
           Documenting (TBR)
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Documenting (TBR)" data-md-level="1">
-        <label class="md-nav__title" for="__nav_8">
+        <label class="md-nav__title" for="__nav_9">
           <span class="md-nav__icon md-icon"></span>
           Documenting (TBR)
         </label>
@@ -585,6 +958,38 @@
               </div>
             
             
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#voxelsize" class="md-nav__link">
+    Voxelsize
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content" data-md-component="content">
             <article class="md-content__inner md-typeset">
@@ -593,7 +998,57 @@
                 
                   <h1>Voxelsize</h1>
                 
-                <p><img alt="voxelsizes" src="../img/a2/Voxelsize.png" /></p>
+                <h3 id="voxelsize">Voxelsize</h3>
+<p><img alt="voxelsizes" src="../img/a2/Voxelsize.png" /></p>
+<p>During our research for a good voxelsize, we first looked at previous groups. </p>
+<table>
+<thead>
+<tr>
+<th>Other groups</th>
+<th>High Resolution</th>
+<th>Low resolution</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Apidae</td>
+<td>1800 x 1800 x 1800 mm</td>
+<td>15000 x 15000 x 15000 mm</td>
+</tr>
+<tr>
+<td>Zoho’s pearl</td>
+<td>3600 x 3600 x 3600 mm</td>
+<td>14400 x 14400 x 14400 mm</td>
+</tr>
+<tr>
+<td>CUB3D</td>
+<td>3240 x 3240 x 3240 mm</td>
+<td></td>
+</tr>
+<tr>
+<td>Green valley</td>
+<td>900 x 900 x 900 mm</td>
+<td>1800 x 1800 x 1800 mm, 3600 x 3600 x 3600 mm</td>
+</tr>
+<tr>
+<td>Zoho</td>
+<td>3000 x 3000 x 3000 mm</td>
+<td></td>
+</tr>
+<tr>
+<td>Oasis:</td>
+<td>3600 x 3600 x 3600 mm</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>We wanted to choose a voxelsize that eases the construction of the façade with certain measures. This would create a almost like lego ‘click and go’ principle for elements we wanted to place on the façade. By standardising the measures of the architectural elements we could swap different tiles in the same place. We started with the low resolution voxelsize. This size needed to be large enough to make fast calculations, but also small enough to make the model as realistic as possible. We found out that 9000x9000x9000mm was the right voxelsize for this resolution. This voxelsize was compared with other groups smaller, but this created a more realistic envelope which we used for the calculations. Our calculations cost us a little bit more time because the voxelsize was smaller, but we difference in calculation time was not significant. </p>
+<p>When we chose the low resolution voxelsize, we investigated the high resolution voxelsize. We wanted to make this voxelsize a multiple of what would fit in the 9000x9000x9000mm voxel. We also looked at the previous groups for some inspiration. Next to this, we thought about the corridors we needed to implement in the building. Our aim was to make a stairway that was wide enough for at least three people to use at the same time. We chose this because the stairways are the places where the people from different facilities come together. To facilitate all the movement in the building, we wanted to make sure that there is enough space for everyone to go from a to b. In the book ‘the human scale’ the staircase needs to be 1800mm wide. This size is the one we used for the staircase. A voxelsize of 1800x1800x1800mm was in our eyes not very handy because of the height of the voxel. We would need two voxels on top of each other to meet the height of the floor. Therefore, we wanted to make the voxel a little bit bigger than 1800mm. We figured that if we would multiply the voxelsize of 1800mm by two, we could fit an entire staircase in one voxel. In addition to this, the problem with the height of the voxelsize would also disappear. As icing on the cake, 3600x3600x3600mm fits also in the low resolution voxelsize we wanted to use for the early calculations. That’s why we chose to use 3600x3600x3600mm as the voxelsize for our high resolution. </p>
+<hr />
+<p><center>
+    <img alt="Connections" src="../img/kleinzwart.png" />
+</center></p>
+<hr />
                 
               
               

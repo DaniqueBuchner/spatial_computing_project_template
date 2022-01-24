@@ -1,0 +1,1762 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-7.3.6">
+    
+    
+      
+        <title>ABM - Docking Station</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.a57b2b03.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.3f5d1f46.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#546d78">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:300,400,400i,700%7C&display=fallback">
+        <style>:root{--md-text-font-family:"Montserrat";--md-code-font-family:""}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../css/ansi-colours.css">
+    
+      <link rel="stylesheet" href="../css/jupyter-cells.css">
+    
+      <link rel="stylesheet" href="../css/pandas-dataframe.css">
+    
+    
+      
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="none" data-md-color-primary="blue-grey" data-md-color-accent="light-blue">
+  
+    
+    <script>function __prefix(e){return new URL("..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#the-agent-based-model" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Docking Station" class="md-header__button md-logo" aria-label="Docking Station" data-md-component="logo">
+      
+  <img src="../img/klein.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Docking Station
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              ABM
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Docking Station" class="md-nav__button md-logo" aria-label="Docking Station" data-md-component="logo">
+      
+  <img src="../img/klein.png" alt="logo">
+
+    </a>
+    Docking Station
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../about/" class="md-nav__link">
+        About
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Planning
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Planning" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Planning
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../a1_planning_process/" class="md-nav__link">
+        Process
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../a1_planning_products/" class="md-nav__link">
+        Products
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Configuring
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Configuring" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Configuring
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_1" type="checkbox" id="__nav_4_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_1">
+          Process
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Process" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_1">
+          <span class="md-nav__icon md-icon"></span>
+          Process
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../a2_configuring_process_designprinciples/" class="md-nav__link">
+        Design Principles
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../a2_configuring_process_voxelsize/" class="md-nav__link">
+        Voxelsize
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../a2_configuring_products/" class="md-nav__link">
+        Products
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../a3_massing/" class="md-nav__link">
+        Massing
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6">
+          Massing_test
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Massing_test" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Massing_test
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_1" type="checkbox" id="__nav_6_1" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6_1">
+          Process
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Process" data-md-level="2">
+        <label class="md-nav__title" for="__nav_6_1">
+          <span class="md-nav__icon md-icon"></span>
+          Process
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../a3_massing_intro/" class="md-nav__link">
+        Intro
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          ABM
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        ABM
+      </a>
+      
+        
+
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#description-objectives" class="md-nav__link">
+    Description (Objectives)
+  </a>
+  
+    <nav class="md-nav" aria-label="Description (Objectives)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#criteria-for-the-agent-based-model" class="md-nav__link">
+    Criteria for the agent based model
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#extra-function-for-the-agent-based-model" class="md-nav__link">
+    Extra function for the agent based model
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-input-of-the-agent-based-model" class="md-nav__link">
+    The input of the agent based model
+  </a>
+  
+    <nav class="md-nav" aria-label="The input of the agent based model">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#agent-preferences" class="md-nav__link">
+    Agent Preferences
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#value-fields" class="md-nav__link">
+    Value fields
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adjacency-matrix" class="md-nav__link">
+    Adjacency matrix
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#placement-of-the-original-location" class="md-nav__link">
+    Placement of the original location
+  </a>
+  
+    <nav class="md-nav" aria-label="Placement of the original location">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ordering-agents" class="md-nav__link">
+    Ordering agents
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#calculating-preference-values" class="md-nav__link">
+    Calculating preference values
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-new-restriction" class="md-nav__link">
+    The new restriction
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-agent-based-model_1" class="md-nav__link">
+    The Agent Based Model
+  </a>
+  
+    <nav class="md-nav" aria-label="The Agent Based Model">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#checking-free-neighbors" class="md-nav__link">
+    Checking free neighbors
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#evaluating-every-free-neighbor" class="md-nav__link">
+    Evaluating every free neighbor
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reaching-required-space" class="md-nav__link">
+    Reaching required space
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adding-or-replacing-the-voxel" class="md-nav__link">
+    Adding or replacing the voxel
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rooms-for-improvement" class="md-nav__link">
+    Rooms for improvement
+  </a>
+  
+    <nav class="md-nav" aria-label="Rooms for improvement">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#voxel-size" class="md-nav__link">
+    Voxel Size
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#more-fields" class="md-nav__link">
+    More fields
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#negotiation-between-agents" class="md-nav__link">
+    Negotiation between agents
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../a3_massing_shafts_corridors/" class="md-nav__link">
+        Shafts and corridors
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../a4_forming/" class="md-nav__link">
+        Forming
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_8">
+          Index
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Index" data-md-level="1">
+        <label class="md-nav__title" for="__nav_8">
+          <span class="md-nav__icon md-icon"></span>
+          Index
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_1" type="checkbox" id="__nav_8_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_8_1">
+          Scripts
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Scripts" data-md-level="2">
+        <label class="md-nav__title" for="__nav_8_1">
+          <span class="md-nav__icon md-icon"></span>
+          Scripts
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Notebooks/s1.1_voxelization_highres/" class="md-nav__link">
+        Step 1.1 Voxelization high resolution
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Notebooks/s1.2_voxelization_lowres/" class="md-nav__link">
+        Step 1.2 Voxelization low resolution
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Notebooks/s2.1_solar_envelope/" class="md-nav__link">
+        Step 2.1 Solar envelope
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Notebooks/s2.2_shaping/" class="md-nav__link">
+        Step 2.2 Shaping
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Notebooks/s2.3_visualisation_solarenv/" class="md-nav__link">
+        Step 2.3 Visualization solar envelope
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Notebooks/s3.1_Skyview/" class="md-nav__link">
+        Step 3.1 Skyview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Notebooks/s3.2_Noise_field_from_street/" class="md-nav__link">
+        Step 3.2 Noise field from street
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Notebooks/s3.3_distance_to_facade/" class="md-nav__link">
+        Step 3.3 Distance to facade
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Notebooks/s3.4_distance_to_entrance/" class="md-nav__link">
+        Step 3.4 Distance to entrance
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Notebooks/s4_interpolation_skyview/" class="md-nav__link">
+        Step 4 Interpolation Skyview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Notebooks/s4_interpolation_sun_access/" class="md-nav__link">
+        Step 4 Interpolation sun access
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Notebooks/s4_interpolation_sun_blockage/" class="md-nav__link">
+        Step 4 Interpolation sun blockage
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Notebooks/s6.1_ABM_growth/" class="md-nav__link">
+        Step 6.1 ABM Growth model
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Notebooks/s6.2_ABM_visual/" class="md-nav__link">
+        Step 6.2 Visualization ABM model
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Notebooks/s7_Shafts_corridors/" class="md-nav__link">
+        Step 7 Shafts and corridors
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Notebooks/s8.1_polgonization_facade2/" class="md-nav__link">
+        Step 8.1 Polygonization Facade
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Notebooks/s8.2_polgonization_structure/" class="md-nav__link">
+        Step 8.2 Polygonization structure
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../index/figures/" class="md-nav__link">
+        Figures
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../index/presentations/" class="md-nav__link">
+        Presentations
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../index/bibliography/" class="md-nav__link">
+        Bibliography
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9" type="checkbox" id="__nav_9" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_9">
+          Documenting (TBR)
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Documenting (TBR)" data-md-level="1">
+        <label class="md-nav__title" for="__nav_9">
+          <span class="md-nav__icon md-icon"></span>
+          Documenting (TBR)
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../documenting/instructions/" class="md-nav__link">
+        Instructions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../documenting/folder_structure/" class="md-nav__link">
+        Folder Structure
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../documenting/guidelines/" class="md-nav__link">
+        Guidelines
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#description-objectives" class="md-nav__link">
+    Description (Objectives)
+  </a>
+  
+    <nav class="md-nav" aria-label="Description (Objectives)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#criteria-for-the-agent-based-model" class="md-nav__link">
+    Criteria for the agent based model
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#extra-function-for-the-agent-based-model" class="md-nav__link">
+    Extra function for the agent based model
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-input-of-the-agent-based-model" class="md-nav__link">
+    The input of the agent based model
+  </a>
+  
+    <nav class="md-nav" aria-label="The input of the agent based model">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#agent-preferences" class="md-nav__link">
+    Agent Preferences
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#value-fields" class="md-nav__link">
+    Value fields
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adjacency-matrix" class="md-nav__link">
+    Adjacency matrix
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#placement-of-the-original-location" class="md-nav__link">
+    Placement of the original location
+  </a>
+  
+    <nav class="md-nav" aria-label="Placement of the original location">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ordering-agents" class="md-nav__link">
+    Ordering agents
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#calculating-preference-values" class="md-nav__link">
+    Calculating preference values
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-new-restriction" class="md-nav__link">
+    The new restriction
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-agent-based-model_1" class="md-nav__link">
+    The Agent Based Model
+  </a>
+  
+    <nav class="md-nav" aria-label="The Agent Based Model">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#checking-free-neighbors" class="md-nav__link">
+    Checking free neighbors
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#evaluating-every-free-neighbor" class="md-nav__link">
+    Evaluating every free neighbor
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reaching-required-space" class="md-nav__link">
+    Reaching required space
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adding-or-replacing-the-voxel" class="md-nav__link">
+    Adding or replacing the voxel
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rooms-for-improvement" class="md-nav__link">
+    Rooms for improvement
+  </a>
+  
+    <nav class="md-nav" aria-label="Rooms for improvement">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#voxel-size" class="md-nav__link">
+    Voxel Size
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#more-fields" class="md-nav__link">
+    More fields
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#negotiation-between-agents" class="md-nav__link">
+    Negotiation between agents
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="the-agent-based-model"><strong>The Agent Based Model</strong></h1>
+<h2 id="description-objectives"><strong>Description (Objectives)</strong></h2>
+<h3 id="criteria-for-the-agent-based-model"><strong>Criteria for the agent based model</strong></h3>
+<ul>
+<li>Value fields<ol>
+<li>Noise</li>
+<li>Distance to the facade</li>
+<li>Distance to the entrance</li>
+<li>Sky view factor</li>
+</ol>
+</li>
+<li>Closeness to other agents  </li>
+<li>Squareness of the space</li>
+</ul>
+<h3 id="extra-function-for-the-agent-based-model"><strong>Extra function for the agent based model</strong></h3>
+<ul>
+<li>When the agent has grown to the required space needed, they can grow like a "greedy snake," such that they can compare the inner voxels with the free neighbors to choose move or not.</li>
+</ul>
+<h2 id="the-input-of-the-agent-based-model"><strong>The input of the agent based model</strong></h2>
+<h3 id="agent-preferences"><strong>Agent Preferences</strong></h3>
+<p>Originally, all preferences range between 0 and 1. For simplification and unification of the calculating process, every of them will be multiplied by a unique constant to balance the scale difference in value fields.  </p>
+<p>For the value field of <strong>noise_field</strong>, <strong>dist_entrance</strong>, and <strong>dist_fac</strong>, the value will be multiplied by -1 in addition, since a lower value in fields corresponding to a higher value in the evaluation equation.</p>
+<p><em>(The following table is only for illustration, which is the head of the original full table)</em></p>
+<table>
+<thead>
+<tr>
+<th>space_name</th>
+<th>space_id</th>
+<th>noise_field</th>
+<th>dist_entrance</th>
+<th>dist_fac</th>
+<th>sunlight</th>
+<th>skyview</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Student Housing 1 p</td>
+<td>0</td>
+<td>0.4</td>
+<td>0.55</td>
+<td>0.87</td>
+<td>0.8</td>
+<td>0.6</td>
+</tr>
+<tr>
+<td>Student Housing 4 p</td>
+<td>1</td>
+<td>0.4</td>
+<td>0.55</td>
+<td>0.87</td>
+<td>0.8</td>
+<td>0.6</td>
+</tr>
+<tr>
+<td>Assisted Living</td>
+<td>2</td>
+<td>0.8</td>
+<td>0.4</td>
+<td>0.93</td>
+<td>0.8</td>
+<td>0.8</td>
+</tr>
+<tr>
+<td>Starter Housing</td>
+<td>3</td>
+<td>0.6</td>
+<td>0.6</td>
+<td>0.93</td>
+<td>0.8</td>
+<td>0.6</td>
+</tr>
+</tbody>
+</table>
+<h3 id="value-fields"><strong>Value fields</strong></h3>
+<p>Value fields are read as a dictionary where keys contain the names and values contain lattices of corrsponding values.</p>
+<div class="codehilite"><pre><span></span><code><span class="n">fields</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">program_prefs</span><span class="o">.</span><span class="n">columns</span><span class="p">:</span>
+    <span class="n">lattice_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">relpath</span><span class="p">(</span><span class="s1">&#39;../Data/dynamic output/&#39;</span> <span class="o">+</span> <span class="n">f</span> <span class="o">+</span> <span class="s1">&#39;.csv&#39;</span><span class="p">)</span>
+    <span class="n">fields</span><span class="p">[</span><span class="n">f</span><span class="p">]</span> <span class="o">=</span> <span class="n">tg</span><span class="o">.</span><span class="n">lattice_from_csv</span><span class="p">(</span><span class="n">lattice_path</span><span class="p">)</span>
+</code></pre></div>
+
+<h3 id="adjacency-matrix"><strong>Adjacency matrix</strong></h3>
+<p>We do not do any changes here for the adjacency matrix, the column and row index are aligned with the corresponding space_id (agent_id).</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>0</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5</th>
+<th>6</th>
+<th>7</th>
+<th>8</th>
+<th>9</th>
+<th>10</th>
+<th>11</th>
+<th>12</th>
+<th>13</th>
+<th>14</th>
+<th>15</th>
+<th>16</th>
+<th>17</th>
+<th>18</th>
+<th>19</th>
+<th>20</th>
+<th>21</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>1</td>
+<td>0.1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0.6</td>
+<td>0.1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0.1</td>
+<td>0</td>
+<td>0</td>
+<td>0.3</td>
+<td>0.2</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0.9</td>
+<td>0.9</td>
+<td>0.1</td>
+</tr>
+<tr>
+<td>1</td>
+<td>0.1</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0.6</td>
+<td>0</td>
+<td>0</td>
+<td>0.1</td>
+<td>0</td>
+<td>0</td>
+<td>0.3</td>
+<td>0.2</td>
+<td>0.8</td>
+<td>0.2</td>
+<td>0</td>
+<td>0.3</td>
+<td>0.2</td>
+<td>0</td>
+<td>0.8</td>
+<td>0</td>
+<td>0.6</td>
+</tr>
+<tr>
+<td>2</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>0.4</td>
+<td>0.2</td>
+<td>0</td>
+<td>0.1</td>
+<td>0.2</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0.1</td>
+<td>0</td>
+<td>0</td>
+<td>0.1</td>
+<td>0.1</td>
+<td>0.1</td>
+<td>0.2</td>
+<td>0.6</td>
+<td>0.3</td>
+<td>0.1</td>
+<td>0</td>
+</tr>
+<tr>
+<td>3</td>
+<td>0</td>
+<td>0</td>
+<td>0.4</td>
+<td>1</td>
+<td>0.9</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0.1</td>
+<td>0.8</td>
+<td>0.2</td>
+<td>0.2</td>
+<td>0.2</td>
+<td>0.6</td>
+<td>0.2</td>
+<td>0.2</td>
+<td>0</td>
+<td>0.2</td>
+<td>0.3</td>
+<td>0.9</td>
+<td>0.6</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<h2 id="placement-of-the-original-location"><strong>Placement of the original location</strong></h2>
+<p>To start the agent based growth, we need to have the original location of those agents. It could be done in completely random, however that will be not suitable especially when we have a relatively large amount of agents. We designed a specific algorithm for the original location.</p>
+<h3 id="ordering-agents"><strong>Ordering agents</strong></h3>
+<p>The first thing to decide is who can be placed first. We now assume that the most important agents are those who take more spaces. As a result, we first order those agents based on their designated areas/volumes.</p>
+<div class="codehilite"><pre><span></span><code><span class="n">sizes_complete</span> <span class="o">=</span> <span class="n">sizes_complete</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span> <span class="o">=</span> <span class="s1">&#39;Area&#39;</span><span class="p">,</span> <span class="n">ascending</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">program_complete</span> <span class="o">=</span> <span class="n">program_complete</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span> <span class="o">=</span> <span class="s1">&#39;Area&#39;</span><span class="p">,</span> <span class="n">ascending</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span>
+</code></pre></div>
+
+<h3 id="calculating-preference-values"><strong>Calculating preference values</strong></h3>
+<p>For each agent, we calculate their perference value for every voxel available and take voxel corresponding to the largest value. Then we assign the voxel to it and update the available lattice.</p>
+<div class="codehilite"><pre><span></span><code><span class="n">avail_index</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">avail_lattice</span><span class="p">))</span><span class="o">.</span><span class="n">T</span>
+<span class="n">a_eval</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">avail_index</span><span class="p">))</span>
+<span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">program_prefs</span><span class="o">.</span><span class="n">columns</span><span class="p">:</span>
+    <span class="n">vals</span> <span class="o">=</span> <span class="n">fields</span><span class="p">[</span><span class="n">f</span><span class="p">][</span><span class="n">avail_index</span><span class="p">[:,</span><span class="mi">0</span><span class="p">],</span> <span class="n">avail_index</span><span class="p">[:,</span><span class="mi">1</span><span class="p">],</span> <span class="n">avail_index</span><span class="p">[:,</span><span class="mi">2</span><span class="p">]]</span>
+    <span class="n">a_weighted_vals</span> <span class="o">=</span> <span class="n">vals</span> <span class="o">**</span> <span class="n">a_prefs</span><span class="p">[</span><span class="n">f</span><span class="p">]</span>
+    <span class="n">a_eval</span> <span class="o">*=</span> <span class="n">a_weighted_vals</span>
+</code></pre></div>
+
+<p>However we later find this not enough. The result of this simple algorithm will centralize agents together, which imposes difficulty of some agents to grow.</p>
+<p><center>
+    <img alt="" src="../img/a3/abm/original_loc_before.png" />
+</center></p>
+<h3 id="the-new-restriction"><strong>The new restriction</strong></h3>
+<p>So a new restriction on the allowed number of occupied neighborhoods is added. If more than 1 of the neighborhoods are occupied, the algorithm will automatically search for the next best location, until the condition is satisfied.</p>
+<div class="codehilite"><pre><span></span><code>    <span class="n">n</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+        <span class="n">fns</span> <span class="o">=</span> <span class="n">avail_lattice</span><span class="o">.</span><span class="n">find_neighbours_masked</span><span class="p">(</span><span class="n">stencil</span><span class="p">,</span> <span class="n">loc</span> <span class="o">=</span> <span class="n">selected_ind</span><span class="p">)</span>
+        <span class="n">blocked</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">fns</span><span class="p">:</span>
+            <span class="n">neigh_3d_id</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">unravel_index</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">avail_lattice</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">occ_lattice</span><span class="p">[</span><span class="n">neigh_3d_id</span><span class="p">]</span> <span class="o">!=</span> <span class="o">-</span><span class="mi">1</span><span class="p">:</span>
+                <span class="n">blocked</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="k">if</span> <span class="n">blocked</span> <span class="o">&gt;=</span> <span class="mi">2</span><span class="p">:</span>
+            <span class="n">selected_int</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argsort</span><span class="p">(</span><span class="o">-</span><span class="n">a_eval</span><span class="p">,</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)[</span><span class="n">n</span><span class="p">]</span>
+            <span class="n">selected_ind</span> <span class="o">=</span> <span class="n">avail_index</span><span class="p">[</span><span class="n">selected_int</span><span class="p">]</span>
+            <span class="n">n</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">break</span>
+</code></pre></div>
+
+<p>The resulting original locations are much more suitable for an agent based growing model.</p>
+<p><center>
+    <img alt="" src="../img/a3/abm/original_loc_after.png" />
+</center></p>
+<h2 id="the-agent-based-model_1"><strong>The Agent Based Model</strong></h2>
+<p>Just as described in Objectives, we made some additonal changes on the agent based model such that it can have more functions. On this page I will (assume that the reader have no background knowledge and) break the whole process into small segment for explanation.</p>
+<h3 id="checking-free-neighbors"><strong>Checking free neighbors</strong></h3>
+<p>In order to grow, the agent should first know where can it grow: the available neighbors that we call it free neighbors. We do it by finding the neighbors of all voxels inside the current agent. Then, if any neighbor we find is available, we add its 3d index into the free_neighs.</p>
+<div class="codehilite"><pre><span></span><code><span class="n">free_neighs</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">loc</span> <span class="ow">in</span> <span class="n">a_locs</span><span class="p">:</span>
+    <span class="n">neighs</span> <span class="o">=</span> <span class="n">avail_lattice</span><span class="o">.</span><span class="n">find_neighbours_masked</span><span class="p">(</span><span class="n">stencil</span><span class="p">,</span> <span class="n">loc</span> <span class="o">=</span> <span class="n">loc</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">neighs</span><span class="p">:</span>
+        <span class="n">neigh_3d_id</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">unravel_index</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">avail_lattice</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">avail_lattice</span><span class="p">[</span><span class="n">neigh_3d_id</span><span class="p">]:</span>
+            <span class="n">free_neighs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">neigh_3d_id</span><span class="p">)</span>
+</code></pre></div>
+
+<p>Then we can proceed to the evaluation.</p>
+<h3 id="evaluating-every-free-neighbor"><strong>Evaluating every free neighbor</strong></h3>
+<p>For free neighbors, we calculate the weighted field values.</p>
+<div class="codehilite"><pre><span></span><code><span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">program_prefs</span><span class="o">.</span><span class="n">columns</span><span class="p">:</span>
+    <span class="n">vals</span> <span class="o">=</span> <span class="n">fields</span><span class="p">[</span><span class="n">f</span><span class="p">][</span><span class="n">fns</span><span class="p">[:,</span><span class="mi">0</span><span class="p">],</span> <span class="n">fns</span><span class="p">[:,</span><span class="mi">1</span><span class="p">],</span> <span class="n">fns</span><span class="p">[:,</span><span class="mi">2</span><span class="p">]]</span>
+    <span class="n">a_weighted_vals</span> <span class="o">=</span> <span class="n">vals</span> <span class="o">**</span> <span class="n">a_prefs</span><span class="p">[</span><span class="n">f</span><span class="p">]</span>
+    <span class="n">a_eval</span> <span class="o">*=</span> <span class="n">a_weighted_vals</span>
+</code></pre></div>
+
+<p>And then we add the closeness to other agents into the account.</p>
+<div class="codehilite"><pre><span></span><code><span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">program_test</span><span class="o">.</span><span class="n">columns</span><span class="p">:</span>
+    <span class="n">s</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+    <span class="n">vals</span> <span class="o">=</span> <span class="n">distance</span><span class="p">(</span><span class="n">s</span><span class="p">,</span><span class="n">fns</span><span class="p">)</span>
+    <span class="n">a_weighted_vals</span> <span class="o">=</span> <span class="n">vals</span> <span class="o">**</span> <span class="n">program_test</span><span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">a_id</span><span class="p">)][</span><span class="n">s</span><span class="p">]</span>
+    <span class="n">a_eval</span> <span class="o">*=</span> <span class="n">a_weighted_vals</span>
+</code></pre></div>
+
+<p>And finally here comes the squareness. The evaulation of the squareness for each free neighbor is based on "how much time it is considered as a neighbor." With a higher number of times, the squareness index would be higher. </p>
+<div class="codehilite"><pre><span></span><code><span class="n">free_neighs_count</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">free_neigh</span> <span class="ow">in</span> <span class="n">free_neighs</span><span class="p">:</span>
+        <span class="n">free_neighs_count</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">free_neighs_sq</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="n">free_neigh</span><span class="p">))</span>
+    <span class="n">a_weighted_square</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">free_neighs_count</span><span class="p">)</span> <span class="o">**</span> <span class="n">square_weight</span>
+    <span class="n">a_eval</span> <span class="o">*=</span> <span class="n">a_weighted_square</span>
+</code></pre></div>
+
+<p>To avoid growing vertically, which is meaningless for most of the cases, we changed the stencil to count it only in horizontal direction.</p>
+<p><center>
+    <img alt="" src="../img/a3/abm/horizontal_voxel.png" />
+</center></p>
+<h3 id="reaching-required-space"><strong>Reaching required space</strong></h3>
+<p>If the agent already reaches the required space, we will also examine the inner voxels. The process for fields and closeness is nearly identical. But the method of retriving squareness index is quite different.</p>
+<div class="codehilite"><pre><span></span><code><span class="n">i_neighs_count</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">current_length</span><span class="p">)</span>
+<span class="k">for</span> <span class="nb">id</span><span class="p">,</span><span class="n">loc</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">a_locs</span><span class="p">):</span>
+    <span class="n">neighs</span> <span class="o">=</span> <span class="n">init_avail_lattice</span><span class="o">.</span><span class="n">find_neighbours_masked</span><span class="p">(</span><span class="n">stencil_sq</span><span class="p">,</span> <span class="n">loc</span> <span class="o">=</span> <span class="n">loc</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">neighs</span><span class="p">:</span>
+        <span class="n">neigh_3d_id</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">unravel_index</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">avail_lattice</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+        <span class="n">i_neighs_count</span><span class="p">[</span><span class="nb">id</span><span class="p">]</span> <span class="o">+=</span> <span class="p">(</span><span class="n">occ_lattice</span><span class="o">==</span><span class="n">a_id</span><span class="p">)[</span><span class="n">neigh_3d_id</span><span class="p">]</span>
+<span class="n">i_weighted_square</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">i_neighs_count</span><span class="p">)</span> <span class="o">**</span> <span class="n">square_weight</span>
+<span class="n">i_eval</span> <span class="o">*=</span> <span class="n">i_weighted_square</span>
+</code></pre></div>
+
+<p>It is actually a more direct way of counting: we just examine how many neighbors of the inner voxel is the same type.  </p>
+<h3 id="adding-or-replacing-the-voxel"><strong>Adding or replacing the voxel</strong></h3>
+<p>The logic is here: if we find the newer voxel is better (as well as the agent reaches the required space), then we delete the inner voxel.</p>
+<div class="codehilite"><pre><span></span><code><span class="n">selected_int</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">a_eval</span><span class="p">)</span>
+<span class="n">selected_int_inner</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argmin</span><span class="p">(</span><span class="n">i_eval</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="p">(</span><span class="n">current_length</span> <span class="o">&gt;=</span> <span class="n">max_space</span><span class="p">)</span> <span class="ow">and</span> <span class="n">i_eval</span><span class="p">[</span><span class="n">selected_int_inner</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">a_eval</span><span class="p">[</span><span class="n">selected_int</span><span class="p">]:</span>
+    <span class="n">selected_inner_3d_id</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">a_locs</span><span class="p">[</span><span class="n">selected_int_inner</span><span class="p">])</span>
+    <span class="n">selected_inner_loc</span> <span class="o">=</span> <span class="n">a_locs</span><span class="p">[</span><span class="n">selected_int_inner</span><span class="p">]</span>
+    <span class="n">agn_locs</span><span class="p">[</span><span class="n">a_id</span><span class="p">]</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="n">selected_int_inner</span><span class="p">)</span>
+    <span class="n">avail_lattice</span><span class="p">[</span><span class="n">selected_inner_3d_id</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">occ_lattice</span><span class="p">[</span><span class="n">selected_inner_3d_id</span><span class="p">]</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+</code></pre></div>
+
+<p>Then, by one if condition we can combine adding under "not reached required space yet" and "older voxel is deleted" together.</p>
+<div class="codehilite"><pre><span></span><code><span class="k">if</span> <span class="n">current_length</span> <span class="o">&lt;</span> <span class="n">max_space</span><span class="p">:</span>
+    <span class="n">selected_neigh_3d_id</span> <span class="o">=</span> <span class="n">free_neighs</span><span class="p">[</span><span class="n">selected_int</span><span class="p">]</span>
+    <span class="n">selected_neigh_loc</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">selected_neigh_3d_id</span><span class="p">)</span><span class="o">.</span><span class="n">flatten</span><span class="p">()</span>
+    <span class="n">agn_locs</span><span class="p">[</span><span class="n">a_id</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">selected_neigh_loc</span><span class="p">)</span>
+    <span class="n">avail_lattice</span><span class="p">[</span><span class="n">selected_neigh_3d_id</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">occ_lattice</span><span class="p">[</span><span class="n">selected_neigh_3d_id</span><span class="p">]</span> <span class="o">=</span> <span class="n">a_id</span>
+</code></pre></div>
+
+<p>The remaining works are visualization, which we will discuss in a different file.</p>
+<h2 id="rooms-for-improvement"><strong>Rooms for improvement</strong></h2>
+<p>The are a lot of improvement yet to be done.</p>
+<h3 id="voxel-size"><strong>Voxel Size</strong></h3>
+<p>The Voxel size, even though using the highest resolution we designed, still can be smaller. In the agent based model we can clearly see that the vertical space is not quite enough for the agents to grow. This causes very disasterous problem at a later stage of the simulation, where agents are blocked by each other and not able to improve to a more optimal space where it could be nicer.  </p>
+<p>The large voxel size also stop the agents from being more precise. The placement of shafts and corridors are less flexible as well.  </p>
+<p>However, the change in the voxel size is not just setting a different parameter. It is more about balancing calculation time and the benefits stated above. For our group, it took us about 4 hours for the agents to grow for 1500 frames (Although the model seldom change after 1200 frames).  </p>
+<p>The complexity of the algorithm increases as the number of frames increases, so the improvement can be very difficult.  </p>
+<h3 id="more-fields"><strong>More fields</strong></h3>
+<p>In this agent based model, we only use 4 fields to evaluate. That is a bit not enough.  </p>
+<p>In some way, that contributes to the reason why many agents are blocked together: 4 fields are quite possible to cause overlaps in directions to grow. In other words, there are not enough variations for agent preferences.  </p>
+<p>Adding fields is very cost-efficient in a way that the calculation of field values is very quick and efficient. Even though this is just imaginary cases, in the real life, adding fields can easily lead to a better configured building with not much increse in computing cost.  </p>
+<h3 id="negotiation-between-agents"><strong>Negotiation between agents</strong></h3>
+<p>It will be hard to do but seems necessary for this project. If we look at the final configuration of the building, we can see a lot of weird shapes. It is easy for human designer or inspector to say it would be nicer if the two spaces can cooperate and maybe exchange some spaces. However it is not doable if every agent just <strong>works on its own</strong>.  </p>
+<p>One proposal I would have for the negotiation is that, we can probably write a model, say, can even consider the voxel that is already occupied. If the value is larger than that of the other agent, then the other agent should just give up this space (and by the setting of the ABM, it will find a place to grow elsewhere).   </p>
+<p>However this obviously will cost other problems such as we have a lot of floating voxels. It is not to say this is not doable, but just need more work to fix and will definitely result in something better.  </p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../a3_massing_intro/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Intro" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Intro
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../a3_massing_shafts_corridors/" class="md-footer__link md-footer__link--next" aria-label="Next: Shafts and corridors" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Shafts and corridors
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        
+          Made with
+          <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+            Material for MkDocs
+          </a>
+        
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.fcfe8b6d.min.js", "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.b1047164.min.js"></script>
+      
+    
+  </body>
+</html>
