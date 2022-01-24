@@ -86,3 +86,15 @@ Then we compute the percentage that those rays hit the surroundings.
 
 
 ## **The Distance to Facade**
+
+The distance to facade means basically the closest distance from the voxel to outside. By calculating the inner voxels, we get the lattice of the facade.
+
+<center>
+    ![](../img/a3/sa/facade.png)
+</center>
+
+Then we calculate the euclidian distance from the voxel to every facade points. Even though I did not manage to do a manifold one, the end result shall be identical.
+
+<center>
+    ![](../img/a3/sa/disfacade.png)
+</center>
