@@ -1,107 +1,54 @@
-# **The Spatial Analysis**
+# **Shaping of the Envelope**
 
-The spatial analysis consists of the calculations for  
+The Shaping of the envelope is basically determinded by the shadow that the building will cast on the surroundings.  
 
-* Distance to entrance
-* Noise field from street
+Instead of making a threshold, we do it based on an idea that we should cut as much voxels as we can. So we use the shadowing as the "instruction for where to cut."  
 
-* Solar envelope
-* Sky view factor
-* Distance to facade
+The all agents combined would be 3608 voxels (1.8x1.8x1.8). However, we need some extra spaces for the agent based model to grow and adjust. As a result, we set the value to be approximately 1.6 of that value, giving us ultimately 5773 voxels needed.  
 
-## **The Distance to Entrance**
+We selected the nearest and larger sized envelope that has 6870 voxels, which is equivalent to a threshold value of 0.44.  
 
-(Place Holder @Paolo)
+Then we get the following envelope.
 
-## **The noise field from street**
+<center>
+    ![](../img/a3/shape/before.png)
+</center>
 
-(Place Holder @Paolo)
+However, we can see a lot of floating voxels here. TO remove those floating voxel, we define a stencil that check only upper and lower neighbor.
 
-## **The Solar Envelope**
+<center>
+    ![](../img/a3/shape/stencil.png)
+</center>
 
-The Solar Envelope is one word for both sun light access and shadow analysis. The shadow analysis will furthermore be used in shaping of the envelope.
+If both upper and lower neighbor is empty, we remove the voxel. Here gives the final envelope.
 
-### **Sun Light Access**
+<center>
+    ![](../img/a3/shape/after.png)
+</center>
 
-For the sun light we choose 4 days representing 4 typical days in 4 seasons at the building's location.  
+## **Pesudocode**
 
 ```python
-sp = Sunpath(longitude=4.3571, latitude=52.0116)
+# initialization
+import topogenesis, numpy, pandas, ...
 
-hoys = []
-sun_vectors = []
-day_multiples = 90
+# load the interpolated lattice
+read sun_blockage.csv & turn into sunblockage_lattice_hi
 
-for d in range(365):
-    if d%day_multiples==0:
-        for h in range(24):
-            hoy = d*24 + h
-            sun = sp.calculate_sun_from_hoy(hoy)
-            sun_vector = sun.sun_vector.to_array()
-            if sun_vector[2] < 0.0:
-                hoys.append(hoy)
-                sun_vectors.append(sun_vector)
+# create different lattice from threshold
+n_frames = 25
+for i in range(0,n_frames+1):
+    frames.append(sunblockage_lattice_hi > i/25)
+
+# calculate how many voxels inside
+n_voxel = []
+for frame in frames:
+    n_voxel.append(sum(np.array(frame).flatten()))
+
+# choose threshold based on how many voxel needed
+base_lattice = frame[14]
+
+# visualization and saving
+visualize
+save to csv
 ```
-
-Then we set the sun light to the reverse direction and shoot them from each voxel of the lattice.  
-
-```python
-sun_dirs = -np.array(converted_sun_vectors)
-vox_cens = envelope_lattice.centroids
-
-for v_cen in vox_cens:
-    for s_dir in sun_dirs:
-        ray_dir.append(s_dir)
-        ray_src.append(v_cen)
-```
-
-Finally we count the percentage that those rays will be blocked.
-
-```python
-sun_access = 1.0 - int_count/sun_count 
-```
-
-<center>
-    ![](../img/a3/sa/sunlight.png)
-</center>
-
-### **Shadowing**
-
-The shadow casted by this building is done by a similar idea. The only thing changed was to choose the original sun light directions (instead of reversed ones), such that from those rays shooted, we can know the percentage of time how the building could possibly block sun light for the surrounding buildings.   
-
-<center>
-    ![](../img/a3/sa/sunblock.png)
-</center>
-
-## **The Sky View Factor**
-
-The sky view factor means the percentage of open sky we can see at a specific point. In places like midtown Manhatten, the sky view factor is very low due to the large amount of sky scrapers. And in comparison, in the middle of a desert the sky view factor and be close to 1, as there is no blockage anywhere.  
-
-This idea can be useful in tackling Urban Heat Island Effect. It is also interesting to use it for other interesting measures.  
-
-The implementation of it is rather simple. Using the same library as above, we can create a semisphere of rays.  
-
-<center>
-    ![](../img/a3/sa/semisphere.png)
-</center>
-
-Then we compute the percentage that those rays hit the surroundings.
-
-<center>
-    ![](../img/a3/sa/skyviewfactor.png)
-</center>
-
-
-## **The Distance to Facade**
-
-The distance to facade means basically the closest distance from the voxel to outside. By calculating the inner voxels, we get the lattice of the facade.
-
-<center>
-    ![](../img/a3/sa/facade.png)
-</center>
-
-Then we calculate the euclidian distance from the voxel to every facade points. Even though I did not manage to do a manifold one, the end result shall be identical.
-
-<center>
-    ![](../img/a3/sa/disfacade.png)
-</center>
