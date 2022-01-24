@@ -5,7 +5,7 @@ This website shows the documentation of the final prject of the course Computati
 Student | Role
 ---------|---------
 Danique Buchner | Journalist
-Gerlinde Havelaar | Diagrammer
+Gerlinde Havelaar (till midterm) | Diagrammer
 Paolo Pantano | Puzzle Solver
 Olivier Wiegerinck | Reflectionist
 Zhenning Zhang | Reflectionist
