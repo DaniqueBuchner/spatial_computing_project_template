@@ -60,7 +60,7 @@ sun_access = 1.0 - int_count/sun_count
 
 ### **Shadowing**
 
-The shadow casted by this building is calculated by a really similar idea. The only thing changed was to choose the original sun light directions (instead of reversed ones). Such that from those rays shooted, we can know the percentage of time how the building could possibly block sun light for the surrounding buildings.   
+The shadow casted by this building is done by a similar idea. The only thing changed was to choose the original sun light directions (instead of reversed ones), such that from those rays shooted, we can know the percentage of time how the building could possibly block sun light for the surrounding buildings.   
 
 <center>
     ![](../img/a3/sa/sunblock.png)
