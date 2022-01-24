@@ -77,3 +77,33 @@ for f in program_prefs.columns:
     a_eval *= a_weighted_vals
 ```
 
+However we later find this not enough. The result of this simple algorithm will centralize agents together, which imposes difficulty of some agents to grow.
+
+<center>
+    ![](../img/a3/abm/original_loc_before.png)
+</center>
+
+So a new restriction on the allowed number of occupied neighborhoods is added. If more than 1 of the neighborhoods are occupied, the algorithm will automatically search for the next best location, until the condition is satisfied.
+
+```python
+    n = 1
+    while True:
+        fns = avail_lattice.find_neighbours_masked(stencil, loc = selected_ind)
+        blocked = 0
+        for n in fns:
+            neigh_3d_id = np.unravel_index(n, avail_lattice.shape)
+            if occ_lattice[neigh_3d_id] != -1:
+                blocked += 1
+        if blocked >= 2:
+            selected_int = np.argsort(-a_eval,axis=0)[n]
+            selected_ind = avail_index[selected_int]
+            n += 1
+        else:
+            break
+```
+
+The resulting original locations are much more suitable for an agent based growing model.
+
+<center>
+    ![](../img/a3/abm/original_loc_after.png)
+</center>
