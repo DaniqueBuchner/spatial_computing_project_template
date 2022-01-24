@@ -1,6 +1,9 @@
+
+---
 <center>
     ![Connections](../img/LOGO.png)
 </center>
+---
 
 <center>
 ## Welcome to the home of the Docking Station
@@ -66,7 +69,8 @@ o Rational spectra of privacy and community (Qualitative)
     ![Connections](../img/home/docking_station_plaatjes-04.jpg)
 </center>
 
+---
 <center>
     ![Connections](../img/kleinzwart.png)
 </center>
-
+---

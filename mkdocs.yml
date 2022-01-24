@@ -14,6 +14,7 @@ nav:
   - Massing: "a3_massing.md"
   - Massing_test:
     - Process: 
+      - Intro: "a3_massing_intro.md"
       - ABM: "a3_massing_abm.md"
   - Forming: "a4_forming.md"
   - Index:
