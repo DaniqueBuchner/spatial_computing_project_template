@@ -250,7 +250,15 @@ However this obviously will cost other problems such as we have a lot of floatin
 
 Using manifold distances will not only give a better estimation for the true distance, but also enable a faster speed for calculation, as it is just reading a big matrix and no real calculation is involved.  
 
-We acutally achieved to use manifold distance in under the branch *Debug_final*, I feel it very interesting to discuss the advantages and drawbacks of it.
+We acutally achieved to use manifold distance in under the branch *Debug_final*, I feel it very interesting to discuss the advantages and drawbacks of it.  
+
+For each voxel, we calculate the manifold distance for reaching any given point. Even though it seems quite time comsuming to calculate, it is actually NOT. Under the 1.8x1.8x1.8 voxel size, the calculation only took us about 150 seconds. So even without any smart improvement, it is doable. We then store them in a 2d array for accessing.  
+
+It saves time in the agent based model. If we count the time for running the agent based model, using manifold distance took 40 minutes for 1000 frames, we believe it is half the time needed compared to calculating euclidian distance every time. As the number of frames goes higher, we expect the difference between calculating times will only become bigger. It is still a bit slow since its complexity grows O(x^2) with the agents size. We tried to accelerate the process by parallel processing but it does not seem to bring any improvement.  
+
+When we were calculating the euclidian distance, the central point of the targeted agent is used. We did that for saving the calculation time. However, here we calculate every closest agent possible. So in terms of "correctness in the ABM," using manifold distance shall be better. However, this more reasonable design does **NOT** appear in the final result of the agent based grow. We believe that using euclidian distance (or using the central point way for calculating) brings more **control** to the agent based model, which can also be important.  
+
+Maybe the conclusion we get in the last paragraph is due to misuse of the weight (designed for euclidian distance) in manifold distance model, so we are (I am) not completely sure about it. That could be the point for improving. Some further investigation could also be done for a more systematical comparison.
 
 ###  The Pesudocode 
 
