@@ -9,7 +9,58 @@ The spatial analysis consists of the calculations for
 
 ### The Distance to Entrance
 
-(Place Holder @Paolo)
+The distance to entrance will be calculated with 5 different entrances. In the figure below the 5 entrances are shown with blue dots.
+
+<center>
+    ![](../img/a3/sa/entrances.png)
+</center>
+
+First the distance to each distance is calculated with the Euclidean method. This is done with the following code:
+
+```python
+substract centroids of voxels
+
+for each centroid:
+    distance_vector = []
+    for each entrance:
+        difference_vector = centroid - street_point
+        distance = squareroot(difference[0]**2 + difference[1]**2)
+    add to the distance matrix
+make list of distances
+
+distance to closest street point = distance.min()
+Convert to lattice
+```
+This gives the following result:
+<center>
+    ![](../img/a3/sa/distance entrance eucl.png)
+</center>
+These Euclidean distances are then used to select the closest entrance for each entrance. This is actually not needed and does not speed up calculation time as the manifold distance is calculated with breadth first traversal. The following pseudocode is used to calculate the manifold distance:
+
+```python
+select closest voxels from euclidian distance
+create stencil
+
+neighbours = closest_voxels.find_neighbours(stencil)
+
+set furthest entrances to maximum distance and closest to zero in lattices
+
+for each centroid:
+    find neighbours of last step
+    validate neighbours if inside envelope
+    select next steps
+    save the 'walked' distance
+    extract minimum distance
+    if all cells == filled:
+        break
+
+Construct lattice of minimum distances
+```
+
+These calculations give the following result:
+<center>
+    ![](../img/a3/sa/distance to entrance.png)
+</center>
 
 ###  The noise field from street 
 

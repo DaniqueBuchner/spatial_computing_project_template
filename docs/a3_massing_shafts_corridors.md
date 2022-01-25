@@ -1,4 +1,3 @@
-### Title 1
-no need to add a page title, thats added automatically by mkdocs :)
-#### subtitle
+# **Shafts and corridors placement**
 
+The shafts and corridors have been placed after the Agent Based growth Model was finished. It happened in three seperate
