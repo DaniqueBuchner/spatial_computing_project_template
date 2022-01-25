@@ -18,6 +18,7 @@ nav:
       - Spatial Analysis: "a3_massing_sa.md" 
       - ABM: "a3_massing_abm.md"
       - Shafts and corridors: "a3_massing_shafts_corridors.md"
+    - Products: "a3_massing_products.md"
   - Forming: 
     - Process: "a4_forming_process.md"
     - Products:
