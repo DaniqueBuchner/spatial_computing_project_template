@@ -44,9 +44,8 @@ nav:
         - Step 7 Shafts and corridors: "Notebooks/s7_Shafts_corridors.ipynb"
         - Step 8.1 Polygonization Facade: "Notebooks/s8.1_polgonization_facade2.ipynb"
         - Step 8.2 Polygonization structure: "Notebooks/s8.2_polgonization_structure.ipynb"
-      - Figures: "index/figures.md"
       - Presentations: "index/presentations.md"
-      - Bibliography: "index/bibliography.md"
+
 
 theme:
   name: material
