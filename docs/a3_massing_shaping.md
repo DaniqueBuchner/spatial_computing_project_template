@@ -2,7 +2,7 @@ The Shaping of the envelope is basically determinded by the shadow that the buil
 
 Instead of making a threshold, we do it based on an idea that we should cut as much voxels as we can. So we use the shadowing as the "instruction for where to cut."  
 
-The all agents combined would be 3608 voxels (1.8x1.8x1.8). However, we need some extra spaces for the agent based model to grow and adjust. As a result, we set the value to be approximately 1.6 of that value, giving us ultimately 5773 voxels needed.  
+All agents combined would be 3608 voxels (1.8x1.8x1.8). However, we need some extra spaces for the agent based model to grow and adjust. As a result, we set the value to be approximately 1.6 of that value, giving us ultimately 5773 voxels needed.  
 
 We selected the nearest and larger sized envelope that has 6870 voxels, which is equivalent to a threshold value of 0.44.  
 
@@ -12,13 +12,13 @@ Then we get the following envelope.
     ![](../img/a3/shape/before.png)
 </center>
 
-However, we can see a lot of floating voxels here. TO remove those floating voxel, we define a stencil that check only upper and lower neighbor.
+However, we can see a lot of floating voxels here. To remove those floating voxels, we define a stencil that checks only upper and lower neighbor.
 
 <center>
     ![](../img/a3/shape/stencil.png)
 </center>
 
-If both upper and lower neighbor is empty, we remove the voxel. Here gives the final envelope.
+If both upper and lower neighbour is empty, we remove the voxel. Here gives the final envelope.
 
 <center>
     ![](../img/a3/shape/after.png)

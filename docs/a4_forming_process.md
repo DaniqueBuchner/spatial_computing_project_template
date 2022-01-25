@@ -1,7 +1,7 @@
 For the architectural part of this project, we wanted to look into the sustainable design goals we have mentioned before. One of our design principles was themed Sustainability, so for the Forming part we looked into sustainable options.
 
 ### Sustainable material
-The first goal is to usesustainable materials, to make sure we have the lowest carbon footprint we can. For the materials we quickly came to the conclusion that we wanted to use wood to build our facade. In the image below, our inspirations can be seen.
+The first goal is to use sustainable materials, to make sure we have the lowest carbon footprint possible. For the materials we quickly came to the conclusion that we wanted to use wood to build our facade. In the image below, our inspirations can be seen.
 <center>
     ![](../img/a4/insp1.png)
 </center>
