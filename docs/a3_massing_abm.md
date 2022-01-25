@@ -258,6 +258,8 @@ It saves time in the agent based model. If we count the time for running the age
 
 When we were calculating the euclidian distance, the central point of the targeted agent is used. We did that for saving the calculation time. However, here we calculate every closest agent possible. So in terms of "correctness in the ABM," using manifold distance shall be better. However, this more reasonable design does **NOT** appear in the final result of the agent based grow. We believe that using euclidian distance (or using the central point way for calculating) brings more **control** to the agent based model, which can also be important.  
 
+> @Paolo could we add gif here
+
 Maybe the conclusion we get in the last paragraph is due to misuse of the weight (designed for euclidian distance) in manifold distance model, so we are (I am) not completely sure about it. That could be the point for improving. Some further investigation could also be done for a more systematical comparison.
 
 ###  The Pesudocode 
