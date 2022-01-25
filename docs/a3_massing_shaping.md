@@ -24,9 +24,9 @@ If both upper and lower neighbor is empty, we remove the voxel. Here gives the f
     ![](../img/a3/shape/after.png)
 </center>
 
-##  Pesudocode 
+##  Pseudocode 
 
-We provide Pesudocode for this part.
+We provide Pseudocode for this part.
 
 ```python
 # initialization
@@ -52,3 +52,10 @@ base_lattice = frame[14]
 visualize
 save to csv
 ```
+
+This is the result:
+
+<center>
+    ![](../img/a3/shape/solarenv_gif.gif)
+*GIF of blockage analysis, shaping and final envelope*
+</center>

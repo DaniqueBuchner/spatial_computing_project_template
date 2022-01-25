@@ -214,7 +214,11 @@ if current_length < max_space:
     occ_lattice[selected_neigh_3d_id] = a_id
 ```
 
-The remaining works are visualization, which you can just copy and paste in our repository.
+This is the visualization of the result:
+<center>
+    ![](../img/a3/abm/ABMgrowth.gif)
+*GIF of the growth of agents*
+</center>
 
 ###  Rooms for improvement 
 

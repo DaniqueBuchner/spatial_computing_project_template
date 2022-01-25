@@ -10,12 +10,12 @@ nav:
     - Process: 
       - Design Principles: "a2_configuring_process_designprinciples.md"
       - Voxelsize: "a2_configuring_process_voxelsize.md"
+      - Shaping: "a3_massing_shaping.md"
     - Products: "a2_configuring_products.md"
   - Massing:
     - Process: 
       - Intro: "a3_massing_intro.md"
-      - Spatial Analysis: "a3_massing_sa.md"
-      - Shaping: "a3_massing_shaping.md"
+      - Spatial Analysis: "a3_massing_sa.md" 
       - ABM: "a3_massing_abm.md"
       - Shafts and corridors: "a3_massing_shafts_corridors.md"
   - Forming: 
