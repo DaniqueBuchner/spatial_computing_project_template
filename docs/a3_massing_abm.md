@@ -248,9 +248,9 @@ However this obviously will cost other problems such as we have a lot of floatin
 
 ####  Use manifold distances 
 
-Using manifold distances will not only give a better estimation for the true distance, but also enable a faster speed for calculation, as it is just reading a big matrix and no real calculation is involved.
+Using manifold distances will not only give a better estimation for the true distance, but also enable a faster speed for calculation, as it is just reading a big matrix and no real calculation is involved.  
 
-~~The reason for our group (me) did not use manifold distance is purely because I did not figured out how to.~~
+We acutally achieved to use manifold distance in under the branch *Debug_final*, I feel it very interesting to discuss the advantages and drawbacks of it.
 
 ###  The Pesudocode 
 
