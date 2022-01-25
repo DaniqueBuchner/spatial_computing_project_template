@@ -25,7 +25,7 @@ For the value field of **noise_field**, **dist_entrance**, and **dist_fac**, the
 
 *(The following table is only for illustration, which is the head of the original full table)*
 
-| space_name          | space_id | noise_field | dist_entrance | dist_fac | sunlight | skyview |
+| space_name          | space_id | noise_field | dist_entrance | dist_fac | sun_access | skyview |
 |---------------------|----------|-------------|---------------|----------|----------|---------|
 | Student Housing 1 p | 0        | 0.4         | 0.55          | 0.87     | 0.8      | 0.6     |
 | Student Housing 4 p | 1        | 0.4         | 0.55          | 0.87     | 0.8      | 0.6     |
@@ -233,9 +233,9 @@ The complexity of the algorithm increases as the number of frames increases, so 
 
 ### **More fields**
 
-In this agent based model, we only use 4 fields to evaluate. That is a bit not enough.  
+In this agent based model, we only use 5 fields to evaluate. That is a bit not enough.  
 
-In some way, that contributes to the reason why many agents are blocked together: 4 fields are quite possible to cause overlaps in directions to grow. In other words, there are not enough variations for agent preferences.  
+In some way, that contributes to the reason why many agents are blocked together: 5 fields are quite possible to cause overlaps in directions to grow. In other words, there are not enough variations for agent preferences.  
 
 Adding fields is very cost-efficient in a way that the calculation of field values is very quick and efficient. Even though this is just imaginary cases, in the real life, adding fields can easily lead to a better configured building with not much increse in computing cost.  
 
