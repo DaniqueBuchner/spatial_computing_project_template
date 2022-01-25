@@ -11,3 +11,9 @@ The second goal is to make a facade that is deconstructable so that the elements
 <center>
     ![](../img/a4/insp2.png)
 </center>
+
+---
+<center>
+    ![Connections](../img/kleinzwart.png)
+</center>
+---

@@ -11,4 +11,10 @@ The tileset that was used in the code is shown above. With this time in red, the
     ![](../img/a4/facade1.png)
 </center>
 The output of the polygonisation workshop combined with our structural tileset results in the image that's showed above. There is also a roof/floor structure added. 
-Optimally, we would have liked to also make a tileset for the inside of the building, since a real loadbearing structure should also support inner walls, not only the outer ones as it is now. This will be further discussed on the Future page.
+Optimally, we would have liked to also make a tileset for the inside of the building, since a real loadbearing structure should also support inner walls, not only the outer ones as it is now.
+
+---
+<center>
+    ![Connections](../img/kleinzwart.png)
+</center>
+---

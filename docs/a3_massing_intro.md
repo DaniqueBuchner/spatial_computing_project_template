@@ -18,3 +18,10 @@ The code exists of eight parts, with the first seven that are part of the massin
 </center>
 
 The steps Analysis, ABM and shafts and corridors will be discussed in this chapter, massing. 
+
+
+---
+<center>
+    ![Connections](../img/kleinzwart.png)
+</center>
+---

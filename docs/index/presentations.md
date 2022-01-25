@@ -1,5 +1,7 @@
-# Presentations
+### Midterm presentation
 
-> Here you should embed your poster and presentations. Here is an example:
+<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vTVAfc_CK6EKYgbxKSzZVUK0Ejql_X9r_4VtBFMXncZ7DGUohB-yNoTOMNYtzt1eEUgK5WcWgRan83R/embed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
 
-<iframe src="https://docs.google.com/gview?url=https://github.com/shervinazadi/spatial_computing_project_template/blob/master/docs/pdf/SpatialComputing.pdf?raw=true&embedded=true" style="width:100%; height:400px;" frameborder="0"></iframe>
+### Final presentation
+
+<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vRB0hNZNlWT2Js1dwlIhNU86un2oBeXjVpIItwPXCwLbKBnM2uZM9a4Fa2c-hzsPjQJ28rRUw_75CA9/embed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
