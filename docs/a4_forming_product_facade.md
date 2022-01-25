@@ -1,3 +1,4 @@
+#### The facade in the model
 <center>
     ![](../img/a4/faacde.png)
 </center>
@@ -21,6 +22,14 @@ You can see on this picture that the building has the sides that are straight, a
 </center>
 
 This is the final tileset we chose to use in the model. With the help of the elements the facade gets structured in a strict grid. Thanks to this grid, the building could be built quickly. We would have liked to make the facade a little more challenging by using different types of design within the facade. This idea is further explained on the Future page.  
+
+#### The different types of facades
+
+
+
+
+
+
 
 
 <center>
