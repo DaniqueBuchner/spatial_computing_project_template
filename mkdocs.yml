@@ -11,8 +11,7 @@ nav:
       - Design Principles: "a2_configuring_process_designprinciples.md"
       - Voxelsize: "a2_configuring_process_voxelsize.md"
     - Products: "a2_configuring_products.md"
-  - Massing: "a3_massing.md"
-  - Massing_test:
+  - Massing:
     - Process: 
       - Intro: "a3_massing_intro.md"
       - Spatial Analysis: "a3_massing_sa.md"
