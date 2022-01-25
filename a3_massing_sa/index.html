@@ -9,7 +9,7 @@
       
       
       
-      <link rel="icon" href="../assets/images/favicon.png">
+      <link rel="icon" href="../img/klein.png">
       <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-7.3.6">
     
     
@@ -71,7 +71,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#the-spatial-analysis" class="md-skip">
+        <a href="#the-distance-to-entrance" class="md-skip">
           Skip to content
         </a>
       
@@ -355,7 +355,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../a3_massing/" class="md-nav__link">
+      <a href="../a3_massing.md" class="md-nav__link">
         Massing
       </a>
     </li>
@@ -446,8 +446,6 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
       
       
-        
-      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           Spatial Analysis
@@ -464,8 +462,6 @@
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
-  
-    
   
   
     <label class="md-nav__title" for="__toc">
@@ -634,10 +630,104 @@
   
   
   
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7">
+          Forming
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Forming" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Forming
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
     <li class="md-nav__item">
-      <a href="../a4_forming/" class="md-nav__link">
-        Forming
+      <a href="../a4_forming_process/" class="md-nav__link">
+        Process
       </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_2" type="checkbox" id="__nav_7_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7_2">
+          Products
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Products" data-md-level="2">
+        <label class="md-nav__title" for="__nav_7_2">
+          <span class="md-nav__icon md-icon"></span>
+          Products
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../a4_forming_product_facade/" class="md-nav__link">
+        Facade
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../a4_forming_product_construction/" class="md-nav__link">
+        Construction
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -1083,8 +1173,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -1194,8 +1282,9 @@
               
                 
                 
-                <h1 id="the-spatial-analysis"><strong>The Spatial Analysis</strong></h1>
-<p>The spatial analysis consists of the calculations for  </p>
+                  <h1>Spatial Analysis</h1>
+                
+                <p>The spatial analysis consists of the calculations for  </p>
 <ul>
 <li>Distance to entrance</li>
 <li>
@@ -1207,13 +1296,13 @@
 <li>Sky view factor</li>
 <li>Distance to facade</li>
 </ul>
-<h2 id="the-distance-to-entrance"><strong>The Distance to Entrance</strong></h2>
+<h3 id="the-distance-to-entrance">The Distance to Entrance</h3>
 <p>(Place Holder @Paolo)</p>
-<h2 id="the-noise-field-from-street"><strong>The noise field from street</strong></h2>
+<h3 id="the-noise-field-from-street">The noise field from street</h3>
 <p>(Place Holder @Paolo)</p>
-<h2 id="the-solar-envelope"><strong>The Solar Envelope</strong></h2>
+<h3 id="the-solar-envelope">The Solar Envelope</h3>
 <p>The Solar Envelope is one word for both sun light access and shadow analysis. The shadow analysis will furthermore be used in shaping of the envelope.</p>
-<h3 id="sun-light-access"><strong>Sun Light Access</strong></h3>
+<h4 id="sun-light-access">Sun Light Access</h4>
 <p>For the sun light we choose 4 days representing 4 typical days in 4 seasons at the building's location.  </p>
 <div class="codehilite"><pre><span></span><code><span class="n">sp</span> <span class="o">=</span> <span class="n">Sunpath</span><span class="p">(</span><span class="n">longitude</span><span class="o">=</span><span class="mf">4.3571</span><span class="p">,</span> <span class="n">latitude</span><span class="o">=</span><span class="mf">52.0116</span><span class="p">)</span>
 
@@ -1249,12 +1338,12 @@
 <p><center>
     <img alt="" src="../img/a3/sa/sunlight.png" />
 </center></p>
-<h3 id="shadowing"><strong>Shadowing</strong></h3>
+<h4 id="shadowing">Shadowing</h4>
 <p>The shadow casted by this building is done by a similar idea. The only thing changed was to choose the original sun light directions (instead of reversed ones), such that from those rays shooted, we can know the percentage of time how the building could possibly block sun light for the surrounding buildings.   </p>
 <p><center>
     <img alt="" src="../img/a3/sa/sunblock.png" />
 </center></p>
-<h2 id="the-sky-view-factor"><strong>The Sky View Factor</strong></h2>
+<h3 id="the-sky-view-factor">The Sky View Factor</h3>
 <p>The sky view factor means the percentage of open sky we can see at a specific point. In places like midtown Manhatten, the sky view factor is very low due to the large amount of sky scrapers. And in comparison, in the middle of a desert the sky view factor and be close to 1, as there is no blockage anywhere.  </p>
 <p>This idea can be useful in tackling Urban Heat Island Effect. It is also interesting to use it for other interesting measures.  </p>
 <p>The implementation of it is rather simple. Using the same library as above, we can create a semisphere of rays.  </p>
@@ -1265,7 +1354,7 @@
 <p><center>
     <img alt="" src="../img/a3/sa/skyviewfactor.png" />
 </center></p>
-<h2 id="the-distance-to-facade"><strong>The Distance to Facade</strong></h2>
+<h3 id="the-distance-to-facade">The Distance to Facade</h3>
 <p>The distance to facade means basically the closest distance from the voxel to outside. By calculating the inner voxels, we get the lattice of the facade.</p>
 <p><center>
     <img alt="" src="../img/a3/sa/facade.png" />
@@ -1274,9 +1363,9 @@
 <p><center>
     <img alt="" src="../img/a3/sa/disfacade.png" />
 </center></p>
-<h2 id="pesudocode"><strong>Pesudocode</strong></h2>
+<h3 id="pesudocode">Pesudocode</h3>
 <p>We provide Pesudocode for this part</p>
-<h3 id="the-solar-envelope_1"><strong>The Solar envelope</strong></h3>
+<h4 id="the-solar-envelope_1">The Solar envelope</h4>
 <div class="codehilite"><pre><span></span><code><span class="c1"># initialization</span>
 <span class="kn">import</span> <span class="nn">numpy</span><span class="o">,</span> <span class="nn">topogenesis</span><span class="o">,</span> <span class="nn">ladybug</span><span class="o">,</span> <span class="nn">...</span>
 <span class="n">load</span> <span class="n">optional_envelope</span><span class="o">.</span><span class="n">obj</span><span class="p">,</span> <span class="n">immediate_context</span><span class="o">.</span><span class="n">obj</span>
@@ -1322,7 +1411,7 @@
 <span class="n">save</span> <span class="n">to</span> <span class="n">csv</span>
 </code></pre></div>
 
-<h3 id="the-sky-view-factor_1"><strong>The sky view factor</strong></h3>
+<h4 id="the-sky-view-factor_1">The sky view factor</h4>
 <div class="codehilite"><pre><span></span><code><span class="c1"># initialization</span>
 <span class="kn">import</span> <span class="nn">numpy</span><span class="o">,</span> <span class="nn">topogenesis</span><span class="o">,</span> <span class="nn">ladybug</span><span class="o">,</span> <span class="nn">...</span>
 <span class="n">load</span> <span class="n">optional_envelope</span><span class="o">.</span><span class="n">obj</span><span class="p">,</span> <span class="n">immediate_context</span><span class="o">.</span><span class="n">obj</span>
@@ -1364,7 +1453,7 @@
 <span class="n">save</span> <span class="n">to</span> <span class="n">csv</span>
 </code></pre></div>
 
-<h3 id="the-distance-to-facade_1"><strong>The Distance to Facade</strong></h3>
+<h4 id="the-distance-to-facade_1">The Distance to Facade</h4>
 <div class="codehilite"><pre><span></span><code><span class="c1"># initialization</span>
 <span class="kn">import</span> <span class="nn">numpy</span><span class="o">,</span> <span class="nn">topogenesis</span><span class="o">,</span> <span class="nn">...</span>
 

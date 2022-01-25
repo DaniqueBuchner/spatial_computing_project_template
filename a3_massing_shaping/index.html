@@ -9,7 +9,7 @@
       
       
       
-      <link rel="icon" href="../assets/images/favicon.png">
+      <link rel="icon" href="../img/klein.png">
       <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-7.3.6">
     
     
@@ -71,7 +71,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#shaping-of-the-envelope" class="md-skip">
+        <a href="#pesudocode" class="md-skip">
           Skip to content
         </a>
       
@@ -355,7 +355,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../a3_massing/" class="md-nav__link">
+      <a href="../a3_massing.md" class="md-nav__link">
         Massing
       </a>
     </li>
@@ -460,8 +460,6 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
       
       
-        
-      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           Shaping
@@ -478,8 +476,6 @@
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
-  
-    
   
   
     <label class="md-nav__title" for="__toc">
@@ -552,10 +548,104 @@
   
   
   
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7">
+          Forming
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Forming" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Forming
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
     <li class="md-nav__item">
-      <a href="../a4_forming/" class="md-nav__link">
-        Forming
+      <a href="../a4_forming_process/" class="md-nav__link">
+        Process
       </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_2" type="checkbox" id="__nav_7_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7_2">
+          Products
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Products" data-md-level="2">
+        <label class="md-nav__title" for="__nav_7_2">
+          <span class="md-nav__icon md-icon"></span>
+          Products
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../a4_forming_product_facade/" class="md-nav__link">
+        Facade
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../a4_forming_product_construction/" class="md-nav__link">
+        Construction
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -1001,8 +1091,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -1030,8 +1118,9 @@
               
                 
                 
-                <h1 id="shaping-of-the-envelope"><strong>Shaping of the Envelope</strong></h1>
-<p>The Shaping of the envelope is basically determinded by the shadow that the building will cast on the surroundings.  </p>
+                  <h1>Shaping</h1>
+                
+                <p>The Shaping of the envelope is basically determinded by the shadow that the building will cast on the surroundings.  </p>
 <p>Instead of making a threshold, we do it based on an idea that we should cut as much voxels as we can. So we use the shadowing as the "instruction for where to cut."  </p>
 <p>The all agents combined would be 3608 voxels (1.8x1.8x1.8). However, we need some extra spaces for the agent based model to grow and adjust. As a result, we set the value to be approximately 1.6 of that value, giving us ultimately 5773 voxels needed.  </p>
 <p>We selected the nearest and larger sized envelope that has 6870 voxels, which is equivalent to a threshold value of 0.44.  </p>
@@ -1047,7 +1136,7 @@
 <p><center>
     <img alt="" src="../img/a3/shape/after.png" />
 </center></p>
-<h2 id="pesudocode"><strong>Pesudocode</strong></h2>
+<h2 id="pesudocode">Pesudocode</h2>
 <p>We provide Pesudocode for this part.</p>
 <div class="codehilite"><pre><span></span><code><span class="c1"># initialization</span>
 <span class="kn">import</span> <span class="nn">topogenesis</span><span class="o">,</span> <span class="nn">numpy</span><span class="o">,</span> <span class="nn">pandas</span><span class="o">,</span> <span class="nn">...</span>
