@@ -1,5 +1,3 @@
-# **The Spatial Analysis**
-
 The spatial analysis consists of the calculations for  
 
 * Distance to entrance
@@ -9,19 +7,19 @@ The spatial analysis consists of the calculations for
 * Sky view factor
 * Distance to facade
 
-## **The Distance to Entrance**
+### The Distance to Entrance
 
 (Place Holder @Paolo)
 
-## **The noise field from street**
+###  The noise field from street 
 
 (Place Holder @Paolo)
 
-## **The Solar Envelope**
+###  The Solar Envelope 
 
 The Solar Envelope is one word for both sun light access and shadow analysis. The shadow analysis will furthermore be used in shaping of the envelope.
 
-### **Sun Light Access**
+####  Sun Light Access 
 
 For the sun light we choose 4 days representing 4 typical days in 4 seasons at the building's location.  
 
@@ -65,7 +63,7 @@ sun_access = 1.0 - int_count/sun_count
     ![](../img/a3/sa/sunlight.png)
 </center>
 
-### **Shadowing**
+####  Shadowing 
 
 The shadow casted by this building is done by a similar idea. The only thing changed was to choose the original sun light directions (instead of reversed ones), such that from those rays shooted, we can know the percentage of time how the building could possibly block sun light for the surrounding buildings.   
 
@@ -73,7 +71,7 @@ The shadow casted by this building is done by a similar idea. The only thing cha
     ![](../img/a3/sa/sunblock.png)
 </center>
 
-## **The Sky View Factor**
+###  The Sky View Factor 
 
 The sky view factor means the percentage of open sky we can see at a specific point. In places like midtown Manhatten, the sky view factor is very low due to the large amount of sky scrapers. And in comparison, in the middle of a desert the sky view factor and be close to 1, as there is no blockage anywhere.  
 
@@ -92,7 +90,7 @@ Then we compute the percentage that those rays hit the surroundings.
 </center>
 
 
-## **The Distance to Facade**
+###  The Distance to Facade 
 
 The distance to facade means basically the closest distance from the voxel to outside. By calculating the inner voxels, we get the lattice of the facade.
 
@@ -106,11 +104,11 @@ Then we calculate the euclidian distance from the voxel to every facade points. 
     ![](../img/a3/sa/disfacade.png)
 </center>
 
-## **Pesudocode**
+###  Pesudocode 
 
 We provide Pesudocode for this part
 
-### **The Solar envelope**
+####  The Solar envelope 
 
 ```python
 # initialization
@@ -158,7 +156,7 @@ visualize
 save to csv
 ```
 
-### **The sky view factor**
+####  The sky view factor 
 
 ```python
 # initialization
@@ -202,7 +200,7 @@ visualize
 save to csv
 ```
 
-### **The Distance to Facade**
+#### The Distance to Facade
 
 ```python
 # initialization

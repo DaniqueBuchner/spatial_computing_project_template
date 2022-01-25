@@ -1,5 +1,3 @@
-# **Shaping of the Envelope**
-
 The Shaping of the envelope is basically determinded by the shadow that the building will cast on the surroundings.  
 
 Instead of making a threshold, we do it based on an idea that we should cut as much voxels as we can. So we use the shadowing as the "instruction for where to cut."  
@@ -26,7 +24,7 @@ If both upper and lower neighbor is empty, we remove the voxel. Here gives the f
     ![](../img/a3/shape/after.png)
 </center>
 
-## **Pesudocode**
+##  Pesudocode 
 
 We provide Pesudocode for this part.
 
