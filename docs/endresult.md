@@ -24,6 +24,6 @@
     ![Connections](../img/a4/Enscape_2022-01-20-10-00-17.png)
 </center>
 
-### Clips of the model
+### Clip of the model
 
 <iframe width="1200" height="400" src="https://www.youtube.com/embed/89kgebdbnCY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

@@ -59,3 +59,9 @@ This is the result:
     ![](../img/a3/shape/solarenv_gif.gif)
 *GIF of blockage analysis, shaping and final envelope*
 </center>
+
+---
+<center>
+    ![Connections](../img/kleinzwart.png)
+</center>
+---
