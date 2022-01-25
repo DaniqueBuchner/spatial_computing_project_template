@@ -1,4 +1,4 @@
-# **Process of Massing**
+### Process of Massing
 
 Here we show the process in code of our massing. The rombuses show the different notebooks. The rectangles show in- or outputs. 
 The code exists of eight parts, with the first seven that are part of the massing.

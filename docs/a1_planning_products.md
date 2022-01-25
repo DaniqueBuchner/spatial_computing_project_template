@@ -2,29 +2,30 @@
 The graph below shows how the possible connections that can be formed between the different facilities in our building.
 <center>
     ![Connections](../img/a1/Diagram_connections.png)
+    *Connection network*
 </center>
 
 ### Metro network: Narratives
 In the graph below, the narratives we created to test our metro network are shown. We took a day of the week and a day of the weekend for every user group and put it in the metro network.
 <center>
     ![Connections](../img/a1/Diagram_narratives.png)
+    *Narratives network*
 </center>
 
 ### Narratives
-##### Student
+#### Student
 <img style="float: right;" width="150px" src="/img/a1/residents-03.png">
-*Week day (Male student, studies philosophy at Erasmus University, 25 years old. Has to do most of his study from home, because of the pandemic.)*
+*Week day (Male student, studies philosophy at Erasmus University, 25 years old. Has to do most of his study from home, because of the pandemic)*
 
 “I am currently studying to get a master’s degree in philosophy. Due to the coronavirus, I have to do the majority of my study from home. I start my day by having breakfast with my roommates. Afterwards, I go to the coffee corner to get some coffee to fuel the day ahead. I always study in the library because I think it’s important to have a separation between work and recreation. I took lunch to the library since I can’t afford the time it takes to have lunch. After a long day of studying, I go past the shop before going home to get dinner. After having dinner at home, I go to the cafe to meet up with some friends living in the neighbourhood. I go back home around 10 o’clock and watch some Netflix in bed.”
 
 <img style="float: left;" width="150px" src="/img/a1/residents-04.png">
-*Weekend day (Male student, lives with his partner in a studio, he enjoys going to the gym and likes spending time outside*
+*Weekend day (Male student, lives with his partner in a studio, he enjoys going to the gym and likes spending time outside)*
 
 “On Saturday mornings, my girlfriend and I always sleep in. We start our day by going to the shop together to get some breakfast. We eat our breakfast at home, and since we both enjoy working out, we decide to go to the gym. After our workout, we go back home to take a shower. The weather is very nice today, so we sit outside in the garden for a bit and get a drink at the cafe. After our drinks, we go to the arcade to play some games. We are both very competitive. We decided to have dinner at home today. After dinner, we stayed at home to clean up the house and chill.”
 
----
-
-**Elderly**
+--- 
+#### Elderly
 <img style="float: right;" width="150px" src="/img/a1/residents-01.png">
 *Week day (older man with partner, respectively 80 and 83 years old. Retired, using assisted housing in the building. Normal weekday for the couple)*
 
@@ -37,7 +38,7 @@ we walk together to the shop at around 10 o’clock. My partner has a walker, so
 “I live by myself in one of the assisted living houses. I start my day by going to the shop to get breakfast. I eat my breakfast at home and clean up my house in the morning. After lunch, I go to the garden to meet one of my best friends. We go to the coffee corner together to get some coffee. During our coffee, we decide to have dinner at the restaurant. After dinner, I say goodbye to my friend and go to the cafe to meet with a few ex-colleagues. We had a few drinks, and decided it would be fun to go to the arcade. On my way back home I go past the community centre to say hello to a few people. After a long day of social interactions, I go back home and head straight to bed.”
 
 ---
-##### Starters
+#### Starters
 <img style="float: right;" width="150px" src="/img/a1/residents-07.png">
 *Week day (Single woman, 28 years old, recently graduated and is now working at an urban planning office)*
 
@@ -49,7 +50,7 @@ we walk together to the shop at around 10 o’clock. My partner has a walker, so
 “Saturdays for us are for family activities. We start the day off by having breakfast at home which takes quite long with two young kids. After we finished getting the kids and ourselves ready, we went for a bike ride through the city. On the way to the bike parking, we stopped at the shop to get some snacks for the bike ride. After a nice, long ride, we put our bicycles in the parking lot again and went to the restaurant to have a luxurious lunch. We decided to visit the kids’ grandmother in the assisted living units. When we got home, we decided to have a nice easy meal and order some pizza, so we don’t have to go out anymore for groceries after this tiring day.”
 
 ---
-##### Visitors
+#### Visitors
 <img style="float: right;" width="150px" src="/img/a1/residents-06.png">
 *Week day (Middle aged employee)*
 
