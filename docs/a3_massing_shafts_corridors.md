@@ -1,5 +1,3 @@
-# **Shafts and corridors placement**
-
 The shafts and corridors have been placed after the Agent Based growth Model was finished. It happened in three seperate parts. First cluster centers were calculated, then some shafts were placed and ultimately the corridors.
 
 The cluster centres were calculated with the following code:

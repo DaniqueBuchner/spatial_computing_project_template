@@ -22,6 +22,16 @@ When we chose the low resolution voxelsize, we investigated the high resolution 
 <center>
     ![voxelsize](../img/a2/Voxelsize_verbeterd1.png)
 </center>
+On the images below, our basic starting envelope can be seen as a maas. Below that, the starting envelope is shown again, but this time it is voxelized with our bigger voxels, this makes for a low resolution. And below that, the same thing is shown but then with a smaller size voxel, resulting in a high resolution voxelized starting envelope.
+<center>
+    ![voxelsize](../img/a2/start.png)
+</center>
+<center>
+    ![voxelsize](../img/a2/low.png)
+</center>
+<center>
+    ![voxelsize](../img/a2/high.png)
+</center>
 ---
 <center>
     ![logo](../img/kleinzwart.png)
