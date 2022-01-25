@@ -64,7 +64,36 @@ These calculations give the following result:
 
 ###  The noise field from street 
 
-(Place Holder @Paolo)
+The noise field from the street has been made by extracting the volume of three streets. The streets 'Boekhorststraat' with 60 decibel, 'Schoterbosstraat' with 50 decibel and 'Van Bokelweg' with 70 decibel. The streets are shown below:
+
+<center>
+    ![](../img/a3/sa/noise streets.png)
+</center>
+
+The streets are lines of points. The distance to each point for each voxel centre is calculated and then the resting volume is calculated by a logarithmic function. You can see the pseudocode below:
+
+```python
+extract voice_centroids and put in lattice
+add noise volume to point clouds noise sources
+
+for each noise source:
+    for each centroid:
+        distance_lattice = sp.spatial.distance.euclidean(centroid, noise source)
+    
+    noise_lattice = noise_base - 20 * np.log10(dist_lattice) - 8
+
+    sum_noise += np.power(10, noise_lattice / 10)
+
+# Repeat for each noise source
+
+aggregate_noise_lattices = 10 * np.log10(sum_noise)
+```
+
+This will give the following result:
+
+<center>
+    ![](../img/a3/sa/noise field.png)
+</center>
 
 ###  The Solar Envelope 
 
