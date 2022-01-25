@@ -452,6 +452,20 @@
               
   
   
+  
+    <li class="md-nav__item">
+      <a href="../a3_massing_shaping/" class="md-nav__link">
+        Shaping
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
     
   
   
@@ -662,6 +676,13 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-pesudocode" class="md-nav__link">
+    The Pesudocode
+  </a>
   
 </li>
       
@@ -1343,6 +1364,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#the-pesudocode" class="md-nav__link">
+    The Pesudocode
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1387,7 +1415,7 @@
 <th>noise_field</th>
 <th>dist_entrance</th>
 <th>dist_fac</th>
-<th>sunlight</th>
+<th>sun_access</th>
 <th>skyview</th>
 </tr>
 </thead>
@@ -1692,7 +1720,7 @@
     <span class="n">occ_lattice</span><span class="p">[</span><span class="n">selected_neigh_3d_id</span><span class="p">]</span> <span class="o">=</span> <span class="n">a_id</span>
 </code></pre></div>
 
-<p>The remaining works are visualization, which we will discuss in a different file.</p>
+<p>The remaining works are visualization, which you can just copy and paste in our repository.</p>
 <h2 id="rooms-for-improvement"><strong>Rooms for improvement</strong></h2>
 <p>The are a lot of improvement yet to be done.</p>
 <h3 id="voxel-size"><strong>Voxel Size</strong></h3>
@@ -1701,8 +1729,8 @@
 <p>However, the change in the voxel size is not just setting a different parameter. It is more about balancing calculation time and the benefits stated above. For our group, it took us about 4 hours for the agents to grow for 1500 frames (Although the model seldom change after 1200 frames).  </p>
 <p>The complexity of the algorithm increases as the number of frames increases, so the improvement can be very difficult.  </p>
 <h3 id="more-fields"><strong>More fields</strong></h3>
-<p>In this agent based model, we only use 4 fields to evaluate. That is a bit not enough.  </p>
-<p>In some way, that contributes to the reason why many agents are blocked together: 4 fields are quite possible to cause overlaps in directions to grow. In other words, there are not enough variations for agent preferences.  </p>
+<p>In this agent based model, we only use 5 fields to evaluate. That is a bit not enough.  </p>
+<p>In some way, that contributes to the reason why many agents are blocked together: 5 fields are quite possible to cause overlaps in directions to grow. In other words, there are not enough variations for agent preferences.  </p>
 <p>Adding fields is very cost-efficient in a way that the calculation of field values is very quick and efficient. Even though this is just imaginary cases, in the real life, adding fields can easily lead to a better configured building with not much increse in computing cost.  </p>
 <h3 id="negotiation-between-agents"><strong>Negotiation between agents</strong></h3>
 <p>It will be hard to do but seems necessary for this project. If we look at the final configuration of the building, we can see a lot of weird shapes. It is easy for human designer or inspector to say it would be nicer if the two spaces can cooperate and maybe exchange some spaces. However it is not doable if every agent just <strong>works on its own</strong>.  </p>
@@ -1711,6 +1739,100 @@
 <h3 id="use-manifold-distances"><strong>Use manifold distances</strong></h3>
 <p>Using manifold distances will not only give a better estimation for the true distance, but also enable a faster speed for calculation, as it is just reading a big matrix and no real calculation is involved.</p>
 <p>~~The reason for our group (me) did not use manifold distance is purely because I did not figured out how to.~~</p>
+<h2 id="the-pesudocode"><strong>The Pesudocode</strong></h2>
+<p>Here we also provide the pesudocode for our ABM.</p>
+<div class="codehilite"><pre><span></span><code><span class="c1"># initialization</span>
+<span class="kn">import</span> <span class="nn">pandas</span><span class="o">,</span> <span class="nn">numpy</span><span class="o">,</span> <span class="nn">topogenesis</span><span class="o">,</span> <span class="nn">...</span>
+<span class="n">define</span> <span class="n">stencil</span> <span class="o">&amp;</span> <span class="n">stencil_sq</span> <span class="p">(</span><span class="n">neighborhood</span> <span class="n">calculation</span><span class="p">)</span>
+
+<span class="c1"># load all results</span>
+<span class="n">read</span> <span class="n">lattice</span><span class="p">,</span> <span class="n">preference</span><span class="p">,</span> <span class="o">&amp;</span> <span class="n">adjacency</span> <span class="n">matrix</span>
+<span class="n">order</span> <span class="n">based</span> <span class="n">on</span> <span class="n">Area</span>
+<span class="n">adjust</span> <span class="n">preferences</span> <span class="n">to</span> <span class="n">balance</span> <span class="n">power</span> <span class="n">effect</span>
+
+<span class="n">read</span> <span class="n">dynamical</span> <span class="n">results</span>
+<span class="n">fields</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="k">for</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">dunamical</span> <span class="n">results</span><span class="p">:</span> 
+    <span class="n">fields</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">value</span>
+
+<span class="c1"># initialization agents</span>
+<span class="k">for</span> <span class="n">a_id</span><span class="p">,</span> <span class="n">a_prefs</span> <span class="ow">in</span> <span class="n">preferences</span><span class="o">.</span><span class="n">iterrows</span><span class="p">():</span>
+    <span class="n">update</span> <span class="n">avail_index</span>
+    <span class="n">a_eval</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">avail_index</span><span class="p">))</span>
+    <span class="c1"># search for the best location inside available lattice</span>
+    <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">fields</span><span class="p">:</span>
+        <span class="n">a_eval</span> <span class="o">*=</span> <span class="n">fields</span><span class="p">[</span><span class="n">f</span><span class="p">][</span><span class="n">avail_index</span><span class="p">]</span> <span class="o">**</span> <span class="n">a_prefs</span><span class="p">[</span><span class="n">f</span><span class="p">]</span>
+    <span class="n">place</span> <span class="n">agent</span> <span class="n">to</span> <span class="n">maximum</span> <span class="n">point</span>
+    <span class="k">if</span> <span class="n">occupied</span> <span class="n">neighbors</span> <span class="o">&gt;=</span> <span class="mi">2</span><span class="p">:</span>
+        <span class="n">choose</span> <span class="n">the</span> <span class="nb">next</span> <span class="n">largest</span> <span class="n">point</span>
+    <span class="n">update</span> <span class="n">lattices</span>
+
+<span class="c1"># calculate distance (estimate)</span>
+<span class="k">def</span> <span class="nf">distance</span><span class="p">(</span><span class="n">a_id</span><span class="p">,</span><span class="n">fns</span><span class="p">):</span>
+    <span class="n">dist</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">cen</span> <span class="ow">in</span> <span class="n">fns_cens</span><span class="p">:</span>
+        <span class="n">dist</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">distance</span> <span class="n">between</span> <span class="n">cen</span> <span class="o">&amp;</span> <span class="n">the</span> <span class="n">central</span> <span class="n">point</span> <span class="n">of</span> <span class="n">a_id</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">dist</span>
+
+<span class="c1"># the agent based model</span>
+<span class="k">while</span> <span class="n">t</span> <span class="o">&lt;</span> <span class="n">n_frames</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">a_id</span><span class="p">,</span> <span class="n">a_prefs</span> <span class="ow">in</span> <span class="n">preferences</span><span class="o">.</span><span class="n">iterrows</span><span class="p">():</span>
+        <span class="c1"># calculate free neighbors and neighbors for squareness</span>
+        <span class="n">fns</span><span class="p">,</span> <span class="n">fns_sq</span> <span class="o">=</span> <span class="p">[],</span> <span class="p">[]</span>
+        <span class="n">neighs</span><span class="p">,</span> <span class="n">neighs_sq</span> <span class="o">=</span> <span class="n">findneigh</span><span class="p">(</span><span class="n">stencil</span><span class="p">,</span><span class="n">loc</span><span class="p">[</span><span class="n">a_id</span><span class="p">]),</span> <span class="n">findneigh</span><span class="p">(</span><span class="n">stencil_sq</span><span class="p">,</span><span class="n">loc</span><span class="p">[</span><span class="n">a_id</span><span class="p">])</span>
+        <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">neighs</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">n</span> <span class="ow">is</span> <span class="n">avail</span><span class="p">:</span> <span class="n">fns</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">neighs_sq</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">n</span> <span class="ow">is</span> <span class="n">avail</span><span class="p">:</span> <span class="n">fns_sq</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+
+        <span class="c1"># the evaluation process</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">fns</span><span class="p">)</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">:</span>
+            <span class="n">a_eval</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">fns</span><span class="p">))</span>
+            <span class="c1"># evaluate preference</span>
+            <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">fields</span><span class="p">:</span>
+                <span class="n">a_eval</span> <span class="o">*=</span> <span class="n">fields</span><span class="p">[</span><span class="n">f</span><span class="p">][</span><span class="n">fns</span><span class="p">]</span> <span class="o">**</span> <span class="n">a_prefs</span><span class="p">[</span><span class="n">f</span><span class="p">]</span>
+            <span class="c1"># evaluate closeness to other agents</span>
+            <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">agents</span><span class="p">:</span>
+                <span class="n">a_eval</span> <span class="o">*=</span> <span class="n">distance</span><span class="p">(</span><span class="n">s</span><span class="p">,</span><span class="n">fns</span><span class="p">)</span> <span class="o">**</span> <span class="n">weight</span>
+            <span class="c1"># evaluate squareness</span>
+            <span class="n">fns_count</span> <span class="o">=</span> <span class="p">[]</span>
+            <span class="k">for</span> <span class="n">fn</span> <span class="ow">in</span> <span class="n">fns</span><span class="p">:</span>
+                <span class="n">fns_count</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">fns_sq</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="n">fn</span><span class="p">))</span>
+            <span class="n">a_eval</span> <span class="o">*=</span> <span class="n">fns_count</span> <span class="o">**</span> <span class="n">square_weight</span>
+
+            <span class="c1"># if the agent has reached its desired space</span>
+            <span class="n">calculate</span> <span class="n">current_length</span>
+            <span class="k">if</span> <span class="n">current_length</span> <span class="o">&gt;=</span> <span class="n">max_space</span><span class="p">:</span>
+                <span class="p">(</span><span class="n">calculate</span> <span class="n">preference</span> <span class="o">&amp;</span> <span class="n">closeness</span><span class="p">)</span>
+                <span class="c1"># evaluate squareness</span>
+                <span class="n">i_neighs_count</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">current_length</span><span class="p">)</span>
+                <span class="k">for</span> <span class="nb">id</span><span class="p">,</span><span class="n">loc</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">a_locs</span><span class="p">):</span>
+                    <span class="n">neighs</span> <span class="o">=</span> <span class="n">findneigh</span><span class="p">(</span><span class="n">stencil_sq</span><span class="p">,</span><span class="n">loc</span><span class="p">)</span>
+                    <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">neighs</span><span class="p">:</span>
+                        <span class="n">i_neighs_count</span><span class="p">[</span><span class="nb">id</span><span class="p">]</span> <span class="o">+=</span> <span class="p">(</span><span class="n">occ_lattice</span><span class="o">==</span><span class="n">a_id</span><span class="p">)[</span><span class="n">n</span><span class="p">]</span>
+                <span class="n">i_eval</span> <span class="o">*=</span> <span class="n">i_neighs_count</span> <span class="o">**</span> <span class="n">square_weight</span>
+
+            <span class="c1"># find lowest inner value</span>
+            <span class="n">selected_int_inner</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argmin</span><span class="p">(</span><span class="n">i_eval</span><span class="p">)</span>
+            <span class="c1"># find largerst fns value</span>
+            <span class="n">selected_int</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">a_eval</span><span class="p">)</span>
+
+            <span class="c1"># if the agent has reached its desired space and the fns is better</span>
+            <span class="k">if</span> <span class="n">current_length</span> <span class="o">&gt;=</span> <span class="n">max_space</span> <span class="ow">and</span> <span class="nb">min</span><span class="p">(</span><span class="n">a_eval</span><span class="p">)</span> <span class="o">&gt;</span> <span class="nb">max</span><span class="p">(</span><span class="n">i_eval</span><span class="p">):</span>
+                <span class="n">remove</span> <span class="n">the</span> <span class="n">inner</span> <span class="n">voxel</span>
+
+            <span class="c1"># add the new voxel</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">current_length</span> <span class="o">&gt;=</span> <span class="n">max_space</span><span class="p">:</span>
+                <span class="n">add</span> <span class="n">selected</span> <span class="n">new</span> <span class="n">voxel</span>
+
+    <span class="n">construct</span> <span class="n">new_occ_lattice</span>
+    <span class="n">frames</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">new_occ_lattice</span><span class="p">)</span>
+    <span class="n">t</span> <span class="o">+=</span> <span class="mi">1</span>
+
+<span class="c1"># visualization and saving</span>
+<span class="n">visualize</span>
+<span class="n">save</span> <span class="n">the</span> <span class="n">frames</span> <span class="n">to</span> <span class="n">csv</span>
+</code></pre></div>
                 
               
               
@@ -1730,7 +1852,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../a3_massing_sa/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Spatial Analysis" rel="prev">
+        <a href="../a3_massing_shaping/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Shaping" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -1739,7 +1861,7 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              Spatial Analysis
+              Shaping
             </div>
           </div>
         </a>
