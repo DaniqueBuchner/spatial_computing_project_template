@@ -1,4 +1,4 @@
-space_name,space_id,noise_field,dist_entrance,dist_fac,sunlight,skyview
+space_name,space_id,noise_field,dist_entrance,dist_fac,sun_access,skyview
 Student Housing 1 p,0,0.4,0.55,0.87,0.8,0.6
 Student Housing 4 p,1,0.4,0.55,0.87,0.8,0.6
 Assisted Living,2,0.8,0.4,0.93,0.8,0.8
