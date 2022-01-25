@@ -26,4 +26,4 @@
 
 ### Clips of the model
 
-<iframe width="1200" height="400" src="https://www.youtube.com/embed/APKmDYFQ1yU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="1200" height="400" src="https://www.youtube.com/embed/89kgebdbnCY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
