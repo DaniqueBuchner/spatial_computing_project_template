@@ -1,4 +1,4 @@
-#### The facade in the model
+### The facade in the model
 <center>
     ![](../img/a4/faacde.png)
 </center>
@@ -21,16 +21,32 @@ You can see on this picture that the building has the sides that are straight, a
     ![](../img/a4/facadetiles.png)
 </center>
 
-This is the final tileset we chose to use in the model. With the help of the elements the facade gets structured in a strict grid. Thanks to this grid, the building could be built quickly. We would have liked to make the facade a little more challenging by using different types of design within the facade. This idea is further explained on the Future page.  
+This is the final tileset we chose to use in the model. With the help of the elements the facade gets structured in a strict grid. Thanks to this grid, the building could be built quickly. We would have liked to make the facade a little more challenging by using different types of design within the facade. 
 
-#### The different types of facades
+### The different types of facades
 
+<center>
+    ![](../img/a4/facade_alle_delen.png)
+</center>
 
+<center>
+    ![](../img/a4/facade_alle_delen1.png)
+</center>
 
+<center>
+    ![](../img/a4/facade_alle_delen2.png)
+</center>
 
+<center>
+    ![](../img/a4/aanzicht_alle_facades.png)
+</center>
 
+<center>
+    ![](../img/a4/aanzicht.png)
+</center>
 
-
+### Recommendations
+We would have liked to make the facade a little more challenging by using different types of design within the facade, for example we would have liked to use more closed tiles on agents like the cinema, but more open and translucent tiles for agents that are more public. This idea would require us to come up with a solution that, somehow, lets the boolean marching cubes know where to put the open tileset and where to put the closed tileset. Unfortunately we were not able to actually get this working but we have a general idea of how to go to work. A method to do this could be as following: Start by designing the different tilesets you would like to use and save each set in their own folder. Make a new notebook for every tileset, this is an easy way to organise this method a bit. (make sure the names of the tilesets and notebooks are easily distinguishable, for your own sake ;)) Then, for all the agents in your list of agents, export an CSV of the voxels. Make sure to do this for every agent individually! Then you would have to hand select which agent gets which tileset and put the correct CSV's in the corresponding notebooks. This might also be possible in code, if you give the agents a value of openess of facade and then let the code figure out "if this value is higher than the treshold that is set, then it gets the most open tileset". Now you can get an OBJ file from the notebooks that has wrapped your agent in the tileset that you have designed for it! When all the agents are done and have a facade, all the OBJ's can be combined to form a nice building with a more complex facade!
 
 <center>
    ![Connections](../img/kleinzwart.png)
