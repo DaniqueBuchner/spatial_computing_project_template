@@ -23,6 +23,7 @@ nav:
     - Products:
       - Facade: "a4_forming_product_facade.md"
       - Construction: "a4_forming_product_construction.md"
+  - Endresults: "endresult.md"
   - Index:
       - Scripts: 
         - Step 1.1 Voxelization high resolution: "Notebooks/s1.1_voxelization_highres.ipynb"
