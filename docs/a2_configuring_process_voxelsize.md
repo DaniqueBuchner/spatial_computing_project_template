@@ -1,5 +1,3 @@
-### Voxelsize
-
 ![voxelsizes](../img/a2/Voxelsize.png)
 
 During our research for a good voxelsize, we first looked at previous groups. 
